@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1752212571654,
+    "description" : "generates a unique flowfile",
+    "identifier" : "Generate-FlowFile",
+    "lastModifiedTimestamp" : 1752212571654,
+    "name" : "Generate FlowFile",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
