@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1752649619869,
     "description" : "",
@@ -7,5 +8,70 @@
     "name" : "all_uebungen",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "uebungen",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f5fbdc21-dc62-3567-a4a1-3bcd805f2396",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "uebung01",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : -230.000007435783,
+        "y" : -379.0000665949933
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min"
+    } ],
+    "processors" : [ ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "mhl_admin",
+    "flowIdentifier" : "alluebungen",
+    "timestamp" : 0
+  }
 }
