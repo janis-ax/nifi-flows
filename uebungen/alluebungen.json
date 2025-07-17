@@ -134,7 +134,7 @@
         "bucketId" : "uebungen",
         "flowId" : "uebungen-03",
         "storageLocation" : "git@github.com:mhlOrdix/nifiDataFlows.git",
-        "version" : "1b0d192bbbaab58f6690eb6814a4aa1218d7ea44"
+        "version" : "7b19442be521d0054250fed7167cc8052a643f01"
       }
     } ],
     "processors" : [ ],
