@@ -338,6 +338,36 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "comments" : "",
+          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
+          "id" : "17febda2-48a8-30ed-0000-0000193c3823",
+          "name" : "SplitJson",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "29dac2f8-313e-3125-ac85-7f418622291d",
+        "identifier" : "305fdca6-ceb4-3fb8-8945-98330fdf85f0",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "success" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
+          "id" : "9c9db789-9b71-3e5d-991d-f6cef6ee5596",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
           "id" : "4fd91ebf-b7fb-3d73-8570-79b33ba0a19d",
           "name" : "Route Vorgesetzte",
@@ -359,6 +389,35 @@
           "id" : "92bd0105-8a12-3bb9-0000-0000193c3823",
           "name" : "RouteOnAttribute",
           "type" : "PROCESSOR"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
+          "id" : "9c9db789-9b71-3e5d-991d-f6cef6ee5596",
+          "name" : "UpdateAttribute",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "29dac2f8-313e-3125-ac85-7f418622291d",
+        "identifier" : "29530212-85a7-34e6-84ee-5025abad1e47",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
+          "id" : "630bfa49-bf79-3054-ae0d-4cad5824237d",
+          "name" : "Get JSON Data",
+          "type" : "INPUT_PORT"
         },
         "zIndex" : 0
       }, {
@@ -391,35 +450,6 @@
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
-          "id" : "17febda2-48a8-30ed-0000-0000193c3823",
-          "name" : "SplitJson",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "29dac2f8-313e-3125-ac85-7f418622291d",
-        "identifier" : "6c6eb26d-cb5d-39ce-9bb2-158de5f6cbfa",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "" ],
-        "source" : {
-          "groupId" : "29dac2f8-313e-3125-ac85-7f418622291d",
-          "id" : "630bfa49-bf79-3054-ae0d-4cad5824237d",
-          "name" : "Get JSON Data",
-          "type" : "INPUT_PORT"
-        },
-        "zIndex" : 0
       } ],
       "controllerServices" : [ ],
       "defaultBackPressureDataSizeThreshold" : "1 GB",
@@ -441,7 +471,7 @@
         "portFunction" : "STANDARD",
         "position" : {
           "x" : -120.0,
-          "y" : -504.0
+          "y" : -712.0
         },
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
@@ -533,6 +563,79 @@
         "schedulingStrategy" : "TIMER_DRIVEN",
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.2.0"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "29dac2f8-313e-3125-ac85-7f418622291d",
+        "identifier" : "9c9db789-9b71-3e5d-991d-f6cef6ee5596",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -168.0,
+          "y" : -568.0
+        },
+        "properties" : {
+          "filename" : "${filename:substring(0,0):prepend(${now():format(\"yyyy-MM-dd-HH-mm-ss\")}):append(\"-users.json\")}",
+          "Store State" : "Do not store state",
+          "canonical-value-lookup-cache-size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "filename" : {
+            "displayName" : "filename",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "filename",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "canonical-value-lookup-cache-size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "canonical-value-lookup-cache-size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
       }, {
         "autoTerminatedRelationships" : [ ],
@@ -834,7 +937,7 @@
         "zIndex" : 0
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
+        "backPressureObjectThreshold" : 10,
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
@@ -1499,7 +1602,7 @@
         "zIndex" : 0
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
+        "backPressureObjectThreshold" : 10,
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
@@ -1902,12 +2005,12 @@
         "y" : 880.0
       },
       "properties" : {
-        "Attribute Strategy" : "Keep Only Common Attributes",
+        "Attribute Strategy" : "Keep All Unique Attributes",
         "min-records" : "1",
         "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
         "merge-strategy" : "Bin-Packing Algorithm",
         "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
-        "max-records" : "1000",
+        "max-records" : "12",
         "min-bin-size" : "0 B",
         "max.bin.count" : "10"
       },
