@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1752737187546,
+    "description" : "Content und Attribute Changing, Datarouting with NiFi Expression",
+    "identifier" : "uebungen02",
+    "lastModifiedTimestamp" : 1752737187546,
+    "name" : "uebungen02",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
