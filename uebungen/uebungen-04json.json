@@ -139,6 +139,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "bf22140f-b1b1-38b2-a804-563df6db1ea4",
+        "name" : "JoltTransformJSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "fe7b982e-eb42-3f39-9be6-6c872c8dc52d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "user, moderator",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "unmatched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2a5ab44a-a28b-399f-a86f-5f7344b545ab",
+        "name" : "RouteOnAttribute",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "79464feb-9c20-37aa-83aa-bd5f9c8aa0d4",
         "name" : "UpdateAttribute",
         "type" : "PROCESSOR"
@@ -199,35 +229,6 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "66d067fc-0da2-364f-80c2-2f99668c05e3",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f0042d43-42e9-38b6-93a4-93b1b2c97637",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "" ],
-      "source" : {
-        "groupId" : "f4272645-4e4d-31fc-b1c4-6afa380522b9",
-        "id" : "38a61218-20f0-3e57-977b-65d026bf82b3",
-        "name" : "Output",
-        "type" : "OUTPUT_PORT"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "40147dc0-2074-3955-aad8-0c61c91e17d5",
         "name" : "SplitJson",
         "type" : "PROCESSOR"
@@ -247,36 +248,6 @@
         "groupId" : "flow-contents-group",
         "id" : "d33f3b75-a122-35b5-bf04-ec1947e742dd",
         "name" : "UpdateAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "17f4cedf-51cb-3213-9f63-dc13079f4f19",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "94bbd4e4-063a-3a2d-9928-a9d626e4e9dc",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "Moderater, User",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "2a5ab44a-a28b-399f-a86f-5f7344b545ab",
-        "name" : "RouteOnAttribute",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -322,14 +293,6 @@
     "funnels" : [ {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "17f4cedf-51cb-3213-9f63-dc13079f4f19",
-      "position" : {
-        "x" : -80.0,
-        "y" : 1208.0
-      }
-    }, {
-      "componentType" : "FUNNEL",
-      "groupIdentifier" : "flow-contents-group",
       "identifier" : "3b321a89-bd41-3d5d-8726-ca7bbc07d50a",
       "position" : {
         "x" : 72.0,
@@ -340,8 +303,8 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "34f7dee0-8e98-325a-9948-84cc3d5d3d18",
       "position" : {
-        "x" : -528.0,
-        "y" : 1216.0
+        "x" : -600.0,
+        "y" : 1096.0
       }
     }, {
       "componentType" : "FUNNEL",
@@ -350,14 +313,6 @@
       "position" : {
         "x" : -848.0,
         "y" : 24.0
-      }
-    }, {
-      "componentType" : "FUNNEL",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "66d067fc-0da2-364f-80c2-2f99668c05e3",
-      "position" : {
-        "x" : 393.45337099788526,
-        "y" : 1005.7264282604151
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -523,8 +478,8 @@
         "type" : "OUTPUT_PORT"
       } ],
       "position" : {
-        "x" : 224.0,
-        "y" : 704.0
+        "x" : 248.0,
+        "y" : 1008.0
       },
       "processGroups" : [ ],
       "processors" : [ {
@@ -1211,6 +1166,103 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "bf22140f-b1b1-38b2-a804-563df6db1ea4",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "JoltTransformJSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -296.0,
+        "y" : 1152.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[{\n  \"operation\": \"modify-overwrite-beta\",\n  \"spec\":{\n    \"name\": \"=concat(@(1,firstName),' ',@(2,lastName))\"\n\t}\n},\n{\n  \"operation\": \"remove\",\n  \"spec\":{\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n\t}\n },\n {\n  \"operation\": \"shift\",\n  \"spec\":{\n   \t\"name\": \"name\",\n    \"email\": \"email\",\n  \t\"phone\": \"phone\"\n \t}\n }]"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "FILE", "DIRECTORY" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
       "yieldDuration" : "1 sec"
     }, {
       "autoTerminatedRelationships" : [ ],
