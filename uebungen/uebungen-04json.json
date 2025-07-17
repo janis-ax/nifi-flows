@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1752748001636,
+    "description" : "SMTP Server",
+    "identifier" : "uebungen-04json",
+    "lastModifiedTimestamp" : 1752748001636,
+    "name" : "uebungen-04.json",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
