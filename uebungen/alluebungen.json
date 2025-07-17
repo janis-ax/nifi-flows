@@ -44,21 +44,98 @@
       "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
       "funnels" : [ ],
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f5fbdc21-dc62-3567-a4a1-3bcd805f2396",
+      "identifier" : "28642ea8-0546-3952-a9a6-d77eba616e08",
       "inputPorts" : [ ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
       "name" : "uebung01",
       "outputPorts" : [ ],
       "position" : {
-        "x" : -230.000007435783,
-        "y" : -379.0000665949933
+        "x" : 1390.0375515542664,
+        "y" : -1743.6490213648226
       },
       "processGroups" : [ ],
       "processors" : [ ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
-      "statelessFlowTimeout" : "1 min"
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "uebungen",
+        "flowId" : "uebungen-01",
+        "storageLocation" : "git@github.com:mhlOrdix/nifiDataFlows.git",
+        "version" : "0090a7e939c0d686eda8864f35e3122caf993cd7"
+      }
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f9472d28-e656-313e-b999-072f3435e89e",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "uebung02",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 1832.0,
+        "y" : -1744.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "uebungen",
+        "flowId" : "uebungen-02",
+        "storageLocation" : "git@github.com:mhlOrdix/nifiDataFlows.git",
+        "version" : "a24b28ba4378072c444b1883900ad192ae6a93c7"
+      }
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "6aa8b230-166f-3881-8b95-d0ec8e8e0ffe",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "uebung03",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 2256.0,
+        "y" : -1744.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "uebungen",
+        "flowId" : "uebungen-03",
+        "storageLocation" : "git@github.com:mhlOrdix/nifiDataFlows.git",
+        "version" : "1b0d192bbbaab58f6690eb6814a4aa1218d7ea44"
+      }
     } ],
     "processors" : [ ],
     "remoteProcessGroups" : [ ],
@@ -70,7 +147,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "mhl_admin",
+    "author" : "admin",
     "flowIdentifier" : "alluebungen",
     "timestamp" : 0
   }
