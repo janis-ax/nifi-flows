@@ -73,7 +73,7 @@
       "zIndex" : 0
     }, {
       "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
+      "backPressureObjectThreshold" : 10,
       "bends" : [ ],
       "componentType" : "CONNECTION",
       "destination" : {
@@ -153,8 +153,8 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "8d44a7dd-fd31-3b36-b444-2835abbf38f2",
       "position" : {
-        "x" : -384.0,
-        "y" : 336.0
+        "x" : -408.0,
+        "y" : 344.0
       }
     }, {
       "componentType" : "FUNNEL",
@@ -195,8 +195,8 @@
       "name" : "UpdateAttribute",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -528.0,
-        "y" : 56.0
+        "x" : -562.9999694824219,
+        "y" : 61.0
       },
       "properties" : {
         "filename" : "${filename:substring(0,0):prepend(${now():format(\"yyyy-MM-dd-HH-mm-ss\")}):append(\"-users.json\")}",
@@ -268,8 +268,8 @@
       "name" : "InvokeHTTP",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : -536.0,
-        "y" : -376.0
+        "x" : -567.9999694824219,
+        "y" : -366.0
       },
       "properties" : {
         "Request Content-Encoding" : "DISABLED",
