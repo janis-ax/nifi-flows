@@ -19,6 +19,36 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
+        "id" : "7a102456-3e04-3e62-8ec3-564cd65b201a",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "204107af-0ce9-39e9-b899-18bf2573b259",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "a89ea04a-f818-3f33-0000-0000070e9281",
+        "name" : "Remove unnessary data and transform",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
         "id" : "09b45bb7-e1c9-3d9b-9523-27a0e61b4547",
         "name" : "Funnel",
         "type" : "FUNNEL"
@@ -76,13 +106,13 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "81c5ef6c-0041-30e9-a5be-701be575f76d",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
+        "id" : "a89ea04a-f818-3f33-0000-0000070e9281",
+        "name" : "Remove unnessary data and transform",
+        "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "391a819a-6805-3e0f-b629-c4e7a4ebfa46",
+      "identifier" : "7b37aea6-f94c-3903-8928-ace20feb2850",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -109,10 +139,10 @@
     "funnels" : [ {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "81c5ef6c-0041-30e9-a5be-701be575f76d",
+      "identifier" : "7a102456-3e04-3e62-8ec3-564cd65b201a",
       "position" : {
-        "x" : 728.0,
-        "y" : 544.0
+        "x" : 1056.000074722045,
+        "y" : 740.667046476364
       }
     }, {
       "componentType" : "FUNNEL",
@@ -134,40 +164,6 @@
       "y" : 0.0
     },
     "processGroups" : [ {
-      "comments" : "",
-      "componentType" : "PROCESS_GROUP",
-      "connections" : [ ],
-      "controllerServices" : [ ],
-      "defaultBackPressureDataSizeThreshold" : "1 GB",
-      "defaultBackPressureObjectThreshold" : 10000,
-      "defaultFlowFileExpiration" : "0 sec",
-      "executionEngine" : "INHERITED",
-      "flowFileConcurrency" : "UNBOUNDED",
-      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
-      "funnels" : [ ],
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "2a6199b8-7b3d-3d02-8963-c6089ce93d68",
-      "inputPorts" : [ ],
-      "labels" : [ ],
-      "maxConcurrentTasks" : 1,
-      "name" : "MyFlow in Github",
-      "outputPorts" : [ ],
-      "position" : {
-        "x" : 920.0,
-        "y" : 280.0
-      },
-      "processGroups" : [ ],
-      "processors" : [ ],
-      "remoteProcessGroups" : [ ],
-      "scheduledState" : "ENABLED",
-      "statelessFlowTimeout" : "1 min",
-      "versionedFlowCoordinates" : {
-        "branch" : "main",
-        "bucketId" : "default",
-        "flowId" : "First-Dataflow-in-Github",
-        "version" : "dca5e351b4be1d85dd9820496a6b0d6d5f176421"
-      }
-    }, {
       "comments" : "",
       "componentType" : "PROCESS_GROUP",
       "connections" : [ {
@@ -1214,7 +1210,104 @@
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
     } ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-jolt-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "a89ea04a-f818-3f33-0000-0000070e9281",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Remove unnessary data and transform",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 680.0,
+        "y" : 544.0
+      },
+      "properties" : {
+        "Jolt Transform" : "jolt-transform-chain",
+        "Max String Length" : "20 MB",
+        "Transform Cache Size" : "1",
+        "Pretty Print" : "false",
+        "Jolt Specification" : "[{\n  \"operation\": \"modify-overwrite-beta\",\n  \"spec\":{\n    \"name\": \"=concat(@(1,firstName),' ',@(2,lastName))\"\n\t}\n},\n{\n  \"operation\": \"remove\",\n  \"spec\":{\n    \"firstName\": \"\",\n    \"lastName\": \"\"\n\t}\n },\n {\n  \"operation\": \"shift\",\n  \"spec\":{\n   \t\"name\": \"name\",\n    \"email\": \"email\",\n  \t\"phone\": \"phone\"\n \t}\n }]"
+      },
+      "propertyDescriptors" : {
+        "Jolt Transform" : {
+          "displayName" : "Jolt Transform",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Transform",
+          "sensitive" : false
+        },
+        "Max String Length" : {
+          "displayName" : "Max String Length",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max String Length",
+          "sensitive" : false
+        },
+        "Transform Cache Size" : {
+          "displayName" : "Transform Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Transform Cache Size",
+          "sensitive" : false
+        },
+        "Custom Transformation Class Name" : {
+          "displayName" : "Custom Transformation Class Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Transformation Class Name",
+          "sensitive" : false
+        },
+        "Custom Module Directory" : {
+          "displayName" : "Custom Module Directory",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Custom Module Directory",
+          "resourceDefinition" : {
+            "cardinality" : "MULTIPLE",
+            "resourceTypes" : [ "DIRECTORY", "FILE" ]
+          },
+          "sensitive" : false
+        },
+        "Pretty Print" : {
+          "displayName" : "Pretty Print",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Pretty Print",
+          "sensitive" : false
+        },
+        "Jolt Specification" : {
+          "displayName" : "Jolt Specification",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Jolt Specification",
+          "resourceDefinition" : {
+            "cardinality" : "SINGLE",
+            "resourceTypes" : [ "FILE", "TEXT" ]
+          },
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.jolt.JoltTransformJSON",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
