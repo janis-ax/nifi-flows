@@ -136,6 +136,40 @@
     "processGroups" : [ {
       "comments" : "",
       "componentType" : "PROCESS_GROUP",
+      "connections" : [ ],
+      "controllerServices" : [ ],
+      "defaultBackPressureDataSizeThreshold" : "1 GB",
+      "defaultBackPressureObjectThreshold" : 10000,
+      "defaultFlowFileExpiration" : "0 sec",
+      "executionEngine" : "INHERITED",
+      "flowFileConcurrency" : "UNBOUNDED",
+      "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+      "funnels" : [ ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2a6199b8-7b3d-3d02-8963-c6089ce93d68",
+      "inputPorts" : [ ],
+      "labels" : [ ],
+      "maxConcurrentTasks" : 1,
+      "name" : "MyFlow in Github",
+      "outputPorts" : [ ],
+      "position" : {
+        "x" : 920.0,
+        "y" : 280.0
+      },
+      "processGroups" : [ ],
+      "processors" : [ ],
+      "remoteProcessGroups" : [ ],
+      "scheduledState" : "ENABLED",
+      "statelessFlowTimeout" : "1 min",
+      "versionedFlowCoordinates" : {
+        "branch" : "main",
+        "bucketId" : "default",
+        "flowId" : "First-Dataflow-in-Github",
+        "version" : "dca5e351b4be1d85dd9820496a6b0d6d5f176421"
+      }
+    }, {
+      "comments" : "",
+      "componentType" : "PROCESS_GROUP",
       "connections" : [ {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
