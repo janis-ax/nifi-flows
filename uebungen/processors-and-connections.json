@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1753277977199,
+    "description" : " First exercise for seminar with processors and connections",
+    "identifier" : "processors-and-connections",
+    "lastModifiedTimestamp" : 1753277977199,
+    "name" : "processors-and-connections",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
