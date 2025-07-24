@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1753338005398,
+    "description" : "Uebung for Expression Language",
+    "identifier" : "expression-language",
+    "lastModifiedTimestamp" : 1753338005398,
+    "name" : "expression-language",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
