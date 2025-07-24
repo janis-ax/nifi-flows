@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1753364349860,
+    "description" : "Final result of exercise with process groups",
+    "identifier" : "process-group",
+    "lastModifiedTimestamp" : 1753364349860,
+    "name" : "process-group",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
