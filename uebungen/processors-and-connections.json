@@ -181,7 +181,22 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 150.0,
+      "identifier" : "c55ebcf3-91ac-30d7-a97c-dc4e0efc34bd",
+      "label" : "This is the final result of the exercise: \"Processors and Connections\"",
+      "position" : {
+        "x" : 464.4676255549757,
+        "y" : 50.30868420685215
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 150.0,
+      "zIndex" : 0
+    } ],
     "maxConcurrentTasks" : 1,
     "name" : "Processors and Connections",
     "outputPorts" : [ ],
