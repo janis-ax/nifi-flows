@@ -279,7 +279,22 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 150.0,
+      "identifier" : "14aefe28-a837-31e4-801c-b27e50ade260",
+      "label" : "This Processgroup is the final result of the exercie",
+      "position" : {
+        "x" : 502.62495657145746,
+        "y" : 27.658776622735218
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 150.0,
+      "zIndex" : 0
+    } ],
     "maxConcurrentTasks" : 1,
     "name" : "NiFi Expression Language",
     "outputPorts" : [ ],
