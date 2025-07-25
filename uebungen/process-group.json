@@ -48,7 +48,7 @@
       "destination" : {
         "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-        "name" : "Userdate in one FlowFile",
+        "name" : "Userdata in one FlowFile",
         "type" : "INPUT_PORT"
       },
       "flowFileExpiration" : "0 sec",
@@ -125,22 +125,7 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ {
-      "componentType" : "LABEL",
-      "groupIdentifier" : "flow-contents-group",
-      "height" : 150.0,
-      "identifier" : "25c9b375-29e6-328a-ab06-92e63086b8f1",
-      "label" : "This Processgroup is the final result of the exercie",
-      "position" : {
-        "x" : 1496.0,
-        "y" : -136.0
-      },
-      "style" : {
-        "font-size" : "12px"
-      },
-      "width" : 150.0,
-      "zIndex" : 0
-    } ],
+    "labels" : [ ],
     "maxConcurrentTasks" : 1,
     "name" : "Process Group",
     "outputPorts" : [ ],
@@ -205,7 +190,7 @@
         "source" : {
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-          "name" : "Userdate in one FlowFile",
+          "name" : "Userdata in one FlowFile",
           "type" : "INPUT_PORT"
         },
         "zIndex" : 0
@@ -405,7 +390,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-        "name" : "Userdate in one FlowFile",
+        "name" : "Userdata in one FlowFile",
         "portFunction" : "STANDARD",
         "position" : {
           "x" : -128.0,
@@ -923,7 +908,7 @@
       "inputPorts" : [ ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
-      "name" : "Fetch Data",
+      "name" : "Fetch Data from API",
       "outputPorts" : [ {
         "allowRemoteAccess" : false,
         "componentType" : "OUTPUT_PORT",
