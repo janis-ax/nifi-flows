@@ -38,7 +38,7 @@
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
+      "name" : "zusammengefügte Kontaktdaten",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
       "selectedRelationships" : [ "merged" ],
@@ -46,7 +46,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "39c45088-aea7-3d0d-0000-00001277d1b3",
-        "name" : "MergeRecord",
+        "name" : "Zusammenfügen von Kontaktdaten",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -75,7 +75,7 @@
       "source" : {
         "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
         "id" : "0960367c-0f1c-37af-9b11-4820df43615b",
-        "name" : "contact data",
+        "name" : "Kontaktdaten",
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
@@ -104,7 +104,7 @@
       "source" : {
         "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "id" : "cf050b04-6a32-359d-a359-efe27aaca10e",
-        "name" : "contact data",
+        "name" : "Kontaktdaten",
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
@@ -117,7 +117,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "39c45088-aea7-3d0d-0000-00001277d1b3",
-        "name" : "MergeRecord",
+        "name" : "Zusammenfügen von Kontaktdaten",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -195,7 +195,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "fbad3082-296a-37e4-ffff-fffffb7f5f26",
-          "name" : "Split Each User",
+          "name" : "Ein FlowFile je User",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -212,7 +212,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "00a33379-4479-3e69-ffff-fffffb7f5f26",
-          "name" : "Fetch Data from API <dummyjson.com/users>",
+          "name" : "Datenabfrage von <dummyjson.com/users> API",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -224,7 +224,7 @@
         "destination" : {
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "cf050b04-6a32-359d-a359-efe27aaca10e",
-          "name" : "contact data",
+          "name" : "Kontaktdaten",
           "type" : "OUTPUT_PORT"
         },
         "flowFileExpiration" : "0 sec",
@@ -241,7 +241,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "e3c2c55b-f0a6-311c-ffff-fffffb7f5f26",
-          "name" : "QueryRecord",
+          "name" : "Kontaktdaten aus JSON extrahieren",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -254,7 +254,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "e3c2c55b-f0a6-311c-ffff-fffffb7f5f26",
-          "name" : "QueryRecord",
+          "name" : "Kontaktdaten aus JSON extrahieren",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -271,7 +271,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "fbad3082-296a-37e4-ffff-fffffb7f5f26",
-          "name" : "Split Each User",
+          "name" : "Ein FlowFile je User",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -289,14 +289,14 @@
       "inputPorts" : [ ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
-      "name" : "Contact Data from <placeholder> API",
+      "name" : "Kontaktdaten von <placeholder> API",
       "outputPorts" : [ {
         "allowRemoteAccess" : false,
         "componentType" : "OUTPUT_PORT",
         "concurrentlySchedulableTaskCount" : 1,
         "groupIdentifier" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "identifier" : "cf050b04-6a32-359d-a359-efe27aaca10e",
-        "name" : "contact data",
+        "name" : "Kontaktdaten",
         "portFunction" : "STANDARD",
         "position" : {
           "x" : -120.0,
@@ -326,7 +326,7 @@
         "groupIdentifier" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "identifier" : "fbad3082-296a-37e4-ffff-fffffb7f5f26",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Split Each User",
+        "name" : "Ein FlowFile je User",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.00006351277784,
@@ -385,7 +385,7 @@
         "groupIdentifier" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "identifier" : "e3c2c55b-f0a6-311c-ffff-fffffb7f5f26",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "QueryRecord",
+        "name" : "Kontaktdaten aus JSON extrahieren",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.00006351277784,
@@ -468,7 +468,7 @@
         "groupIdentifier" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "identifier" : "00a33379-4479-3e69-ffff-fffffb7f5f26",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Datenabfrage von <dummyjson.com/users> API",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.00006351277784,
@@ -773,7 +773,7 @@
           "comments" : "",
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "3765ba47-5093-3a01-0000-00003e36c527",
-          "name" : "QueryRecord",
+          "name" : "Kontaktdaten aus JSON extrahieren",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -790,7 +790,7 @@
           "comments" : "",
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "2ccd2ad5-7996-3125-0000-00003e36c527",
-          "name" : "Split Each User",
+          "name" : "Ein User je FlowFile",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -802,7 +802,7 @@
         "destination" : {
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "0960367c-0f1c-37af-9b11-4820df43615b",
-          "name" : "contact data",
+          "name" : "Kontaktdaten",
           "type" : "OUTPUT_PORT"
         },
         "flowFileExpiration" : "0 sec",
@@ -819,7 +819,7 @@
           "comments" : "",
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "3765ba47-5093-3a01-0000-00003e36c527",
-          "name" : "QueryRecord",
+          "name" : "Kontaktdaten aus JSON extrahieren",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -832,7 +832,7 @@
           "comments" : "",
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "2ccd2ad5-7996-3125-0000-00003e36c527",
-          "name" : "Split Each User",
+          "name" : "Ein User je FlowFile",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -849,7 +849,7 @@
           "comments" : "",
           "groupId" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
           "id" : "d1c3904d-e8fd-3f5f-0000-00003e36c527",
-          "name" : "Fetch Data from API <dummyjson.com/users>",
+          "name" : "Datenabruf von <dummyjson.com/users>",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -867,14 +867,14 @@
       "inputPorts" : [ ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
-      "name" : "Contact Data from <dummy.json> API",
+      "name" : "Kontaktdaten von <dummy.json> API",
       "outputPorts" : [ {
         "allowRemoteAccess" : false,
         "componentType" : "OUTPUT_PORT",
         "concurrentlySchedulableTaskCount" : 1,
         "groupIdentifier" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
         "identifier" : "0960367c-0f1c-37af-9b11-4820df43615b",
-        "name" : "contact data",
+        "name" : "Kontaktdaten",
         "portFunction" : "STANDARD",
         "position" : {
           "x" : 96.0,
@@ -904,7 +904,7 @@
         "groupIdentifier" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
         "identifier" : "d1c3904d-e8fd-3f5f-0000-00003e36c527",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Datenabruf von <dummyjson.com/users>",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 40.66193021840263,
@@ -1209,7 +1209,7 @@
         "groupIdentifier" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
         "identifier" : "3765ba47-5093-3a01-0000-00003e36c527",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "QueryRecord",
+        "name" : "Kontaktdaten aus JSON extrahieren",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 40.66193021840263,
@@ -1292,7 +1292,7 @@
         "groupIdentifier" : "b9467f2f-ba42-3d12-812e-1a7fb684e533",
         "identifier" : "2ccd2ad5-7996-3125-0000-00003e36c527",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Split Each User",
+        "name" : "Ein User je FlowFile",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : 40.66193021840263,
@@ -1356,7 +1356,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "39c45088-aea7-3d0d-0000-00001277d1b3",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "MergeRecord",
+      "name" : "Zusammenfügen von Kontaktdaten",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 1104.0,
