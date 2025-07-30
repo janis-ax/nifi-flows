@@ -19,38 +19,8 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "f1f20ce1-be33-3edb-8ad3-ab14fe28b473",
-        "name" : "Funnel",
-        "type" : "FUNNEL"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "767ff997-f91a-3505-9e30-f01563653d49",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "admin" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "39d07636-7c1f-36eb-b6cb-fe58319723f2",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
         "id" : "eb1d27b6-4552-36b9-ffff-ffffb13572a6",
-        "name" : "Add Salary as Attribute",
+        "name" : "Gehalt als Attribute hinzufügen",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -67,7 +37,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "3852f200-c386-3805-96fc-23b8d81fbe84",
-        "name" : "Add UserRole as Attribute",
+        "name" : "UserRole zu Attributen hinzugefügt",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -80,7 +50,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "b28271cd-553f-3f91-a7a3-e79bda526150",
-        "name" : "Rename FlowFiles to ID of the User",
+        "name" : "Umbennung FlowFiles zu UserId",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -97,7 +67,37 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "7fcec364-4c8c-3f4c-aef7-99179e7c9af5",
-        "name" : "Split Each User",
+        "name" : "Ein User je FlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "1840f08f-64cd-3b64-a9c8-c0ea787300ae",
+        "name" : "Zeitstempel und .json zu FlowFile Namen",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c0e8cb6e-0942-3a1d-ac16-ca502c98293c",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "matched" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "b28271cd-553f-3f91-a7a3-e79bda526150",
+        "name" : "Umbennung FlowFiles zu UserId",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -115,49 +115,19 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "063c1fd3-2c20-3045-9659-8f8677c184e5",
+      "identifier" : "2b6d8cf9-00b8-3684-8694-e13ef0144c4d",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "unmatched" ],
+      "selectedRelationships" : [ "Mitarbeiter" ],
       "source" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "39d07636-7c1f-36eb-b6cb-fe58319723f2",
-        "name" : "RouteOnAttribute",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "1840f08f-64cd-3b64-a9c8-c0ea787300ae",
-        "name" : "Add a time stemp and \".json\" to FlowFile name ",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
-      "identifier" : "c0e8cb6e-0942-3a1d-ac16-ca502c98293c",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "matched" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "b28271cd-553f-3f91-a7a3-e79bda526150",
-        "name" : "Rename FlowFiles to ID of the User",
+        "name" : "Nach Gehalt routen",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -170,7 +140,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "39d07636-7c1f-36eb-b6cb-fe58319723f2",
-        "name" : "RouteOnAttribute",
+        "name" : "Nach Gehalt routen",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -187,7 +157,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "eb1d27b6-4552-36b9-ffff-ffffb13572a6",
-        "name" : "Add Salary as Attribute",
+        "name" : "Gehalt als Attribute hinzufügen",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -200,7 +170,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "7fcec364-4c8c-3f4c-aef7-99179e7c9af5",
-        "name" : "Split Each User",
+        "name" : "Ein User je FlowFile",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -217,7 +187,37 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "8197582f-f160-3d70-bfed-c70ee7a15ad5",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Daten von API <dummyjson.com/users> abrufen",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "f1f20ce1-be33-3edb-8ad3-ab14fe28b473",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "0b72d159-6e1a-36ce-8b7f-9665207d4aff",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "Vorgesetzte" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "39d07636-7c1f-36eb-b6cb-fe58319723f2",
+        "name" : "Nach Gehalt routen",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -230,7 +230,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "3852f200-c386-3805-96fc-23b8d81fbe84",
-        "name" : "Add UserRole as Attribute",
+        "name" : "UserRole zu Attributen hinzugefügt",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -247,7 +247,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "1840f08f-64cd-3b64-a9c8-c0ea787300ae",
-        "name" : "Add a time stemp and \".json\" to FlowFile name ",
+        "name" : "Zeitstempel und .json zu FlowFile Namen",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -284,7 +284,7 @@
       "groupIdentifier" : "flow-contents-group",
       "height" : 150.0,
       "identifier" : "14aefe28-a837-31e4-801c-b27e50ade260",
-      "label" : "This Processgroup is the final result of the exercie",
+      "label" : "Finale Lösung der Expression Language",
       "position" : {
         "x" : 502.62495657145746,
         "y" : 27.658776622735218
@@ -319,7 +319,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "8197582f-f160-3d70-bfed-c70ee7a15ad5",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Fetch Data from API <dummyjson.com/users>",
+      "name" : "Daten von API <dummyjson.com/users> abrufen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -624,7 +624,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "1840f08f-64cd-3b64-a9c8-c0ea787300ae",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Add a time stemp and \".json\" to FlowFile name ",
+      "name" : "Zeitstempel und .json zu FlowFile Namen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -697,7 +697,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "eb1d27b6-4552-36b9-ffff-ffffb13572a6",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Add Salary as Attribute",
+      "name" : "Gehalt als Attribute hinzufügen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -755,7 +755,7 @@
       "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
       "yieldDuration" : "1 sec"
     }, {
-      "autoTerminatedRelationships" : [ ],
+      "autoTerminatedRelationships" : [ "unmatched" ],
       "backoffMechanism" : "PENALIZE_FLOWFILE",
       "bulletinLevel" : "WARN",
       "bundle" : {
@@ -770,7 +770,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "39d07636-7c1f-36eb-b6cb-fe58319723f2",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "RouteOnAttribute",
+      "name" : "Nach Gehalt routen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -136.0,
@@ -778,7 +778,8 @@
       },
       "properties" : {
         "Routing Strategy" : "Route to Property name",
-        "admin" : "${userSalary:equals(5000)}"
+        "Vorgesetzte" : "${userSalary:equals(5000)}",
+        "Mitarbeiter" : "${userSalary:lt(5000)}"
       },
       "propertyDescriptors" : {
         "Routing Strategy" : {
@@ -788,11 +789,18 @@
           "name" : "Routing Strategy",
           "sensitive" : false
         },
-        "admin" : {
-          "displayName" : "admin",
+        "Vorgesetzte" : {
+          "displayName" : "Vorgesetzte",
           "dynamic" : true,
           "identifiesControllerService" : false,
-          "name" : "admin",
+          "name" : "Vorgesetzte",
+          "sensitive" : false
+        },
+        "Mitarbeiter" : {
+          "displayName" : "Mitarbeiter",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "Mitarbeiter",
           "sensitive" : false
         }
       },
@@ -821,7 +829,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "3852f200-c386-3805-96fc-23b8d81fbe84",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Add UserRole as Attribute",
+      "name" : "UserRole zu Attributen hinzugefügt",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -904,7 +912,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "7fcec364-4c8c-3f4c-aef7-99179e7c9af5",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Split Each User",
+      "name" : "Ein User je FlowFile",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -963,7 +971,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "b28271cd-553f-3f91-a7a3-e79bda526150",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Rename FlowFiles to ID of the User",
+      "name" : "Umbennung FlowFiles zu UserId",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
