@@ -48,7 +48,7 @@
       "destination" : {
         "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-        "name" : "Userdata in one FlowFile",
+        "name" : "Nutzerdaten in FlowFiles",
         "type" : "INPUT_PORT"
       },
       "flowFileExpiration" : "0 sec",
@@ -64,7 +64,7 @@
       "source" : {
         "groupId" : "10f1064c-827c-3648-9fa9-6d4d69367dff",
         "id" : "c5ed2637-a4d2-31a4-831f-c01aaa5233dd",
-        "name" : "Fetched Data",
+        "name" : "Abgerufene Daten",
         "type" : "OUTPUT_PORT"
       },
       "zIndex" : 0
@@ -161,7 +161,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "e783e04f-c1b0-3090-ffff-ffffcf2e42ce",
-          "name" : "RouteOnAttribute",
+          "name" : "Nach Gehalt routen",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -174,7 +174,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
-          "name" : "Split Each User",
+          "name" : "User in FlowFiles aufteilen",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -190,7 +190,7 @@
         "source" : {
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-          "name" : "Userdata in one FlowFile",
+          "name" : "Nutzerdaten in FlowFiles",
           "type" : "INPUT_PORT"
         },
         "zIndex" : 0
@@ -219,7 +219,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "e783e04f-c1b0-3090-ffff-ffffcf2e42ce",
-          "name" : "RouteOnAttribute",
+          "name" : "Nach Gehalt routen",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -232,7 +232,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
-          "name" : "Add a time stemp and \".json\" to FlowFile name ",
+          "name" : "Zeistempel und .json im FlowFile Namen",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -249,7 +249,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
-          "name" : "Rename FlowFiles to ID of the User",
+          "name" : "UserId als FlowFile Name",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -262,7 +262,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "908e57bd-539f-3ec1-ffff-ffffcf2e42ce",
-          "name" : "Add Salary as Attribute",
+          "name" : "Gehalt als Attribut hinzugefügt",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -279,7 +279,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
-          "name" : "Add UserRole as Attribute",
+          "name" : "UserRole als Attribute hinzugefügt",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -292,7 +292,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
-          "name" : "Add UserRole as Attribute",
+          "name" : "UserRole als Attribute hinzugefügt",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -309,7 +309,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
-          "name" : "Add a time stemp and \".json\" to FlowFile name ",
+          "name" : "Zeistempel und .json im FlowFile Namen",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -322,7 +322,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
-          "name" : "Rename FlowFiles to ID of the User",
+          "name" : "UserId als FlowFile Name",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -339,7 +339,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
-          "name" : "Split Each User",
+          "name" : "User in FlowFiles aufteilen",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -352,7 +352,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "e783e04f-c1b0-3090-ffff-ffffcf2e42ce",
-          "name" : "RouteOnAttribute",
+          "name" : "Nach Gehalt routen",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
@@ -369,7 +369,7 @@
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "908e57bd-539f-3ec1-ffff-ffffcf2e42ce",
-          "name" : "Add Salary as Attribute",
+          "name" : "Gehalt als Attribut hinzugefügt",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -390,7 +390,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-        "name" : "Userdata in one FlowFile",
+        "name" : "Nutzerdaten in FlowFiles",
         "portFunction" : "STANDARD",
         "position" : {
           "x" : -128.0,
@@ -401,7 +401,7 @@
       } ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
-      "name" : "Transforming and Routing",
+      "name" : "Transformation und Weiterleiten",
       "outputPorts" : [ {
         "allowRemoteAccess" : false,
         "componentType" : "OUTPUT_PORT",
@@ -452,7 +452,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Add a time stemp and \".json\" to FlowFile name ",
+        "name" : "Zeistempel und .json im FlowFile Namen",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -179.99995515860337,
@@ -525,7 +525,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Rename FlowFiles to ID of the User",
+        "name" : "UserId als FlowFile Name",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -179.99995515860337,
@@ -608,7 +608,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "e783e04f-c1b0-3090-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "RouteOnAttribute",
+        "name" : "Nach Gehalt routen",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -171.99995515860337,
@@ -659,7 +659,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Split Each User",
+        "name" : "User in FlowFiles aufteilen",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -179.99995515860337,
@@ -718,7 +718,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "908e57bd-539f-3ec1-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Add Salary as Attribute",
+        "name" : "Gehalt als Attribut hinzugefügt",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -179.99995515860337,
@@ -791,7 +791,7 @@
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
         "identifier" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Add UserRole as Attribute",
+        "name" : "UserRole als Attribute hinzugefügt",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -179.99995515860337,
@@ -873,7 +873,7 @@
         "destination" : {
           "groupId" : "10f1064c-827c-3648-9fa9-6d4d69367dff",
           "id" : "c5ed2637-a4d2-31a4-831f-c01aaa5233dd",
-          "name" : "Fetched Data",
+          "name" : "Abgerufene Daten",
           "type" : "OUTPUT_PORT"
         },
         "flowFileExpiration" : "0 sec",
@@ -890,7 +890,7 @@
           "comments" : "",
           "groupId" : "10f1064c-827c-3648-9fa9-6d4d69367dff",
           "id" : "8f7ea2a7-dced-3a63-0000-000061c75a47",
-          "name" : "Fetch Data from API <dummyjson.com/users>",
+          "name" : "Datenabruf von <dummyjson.com/users>",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -908,14 +908,14 @@
       "inputPorts" : [ ],
       "labels" : [ ],
       "maxConcurrentTasks" : 1,
-      "name" : "Fetch Data from API",
+      "name" : "Datenabruf von API",
       "outputPorts" : [ {
         "allowRemoteAccess" : false,
         "componentType" : "OUTPUT_PORT",
         "concurrentlySchedulableTaskCount" : 1,
         "groupIdentifier" : "10f1064c-827c-3648-9fa9-6d4d69367dff",
         "identifier" : "c5ed2637-a4d2-31a4-831f-c01aaa5233dd",
-        "name" : "Fetched Data",
+        "name" : "Abgerufene Daten",
         "portFunction" : "STANDARD",
         "position" : {
           "x" : -120.0,
@@ -945,7 +945,7 @@
         "groupIdentifier" : "10f1064c-827c-3648-9fa9-6d4d69367dff",
         "identifier" : "8f7ea2a7-dced-3a63-0000-000061c75a47",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Datenabruf von <dummyjson.com/users>",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.00002228781204,
