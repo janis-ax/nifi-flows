@@ -20,7 +20,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "fc191f9c-109e-39f3-0000-00004b4329b1",
-        "name" : "Split Each User",
+        "name" : "User aufteilen in je ein FlowFile",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -37,7 +37,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "3069f274-f4bb-3d6b-0000-00000ca62602",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Daten von der API abrufen <dummyjson.com/users>",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -50,7 +50,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "fa452d1b-3cb0-32ef-97bb-e0d68503366a",
-        "name" : "LogAttribute for Failure FlowFiles",
+        "name" : "Attribute für gescheiterte FlowFiles loggen",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -67,7 +67,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "3069f274-f4bb-3d6b-0000-00000ca62602",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Daten von der API abrufen <dummyjson.com/users>",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -80,7 +80,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "1318a0ce-1356-3a86-0000-00001bc88e85",
-        "name" : "Add Attributes userID, userRole",
+        "name" : "Attribute userID, userRole hinzufügen",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -97,7 +97,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "fc191f9c-109e-39f3-0000-00004b4329b1",
-        "name" : "Split Each User",
+        "name" : "User aufteilen in je ein FlowFile",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -127,7 +127,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "1318a0ce-1356-3a86-0000-00001bc88e85",
-        "name" : "Add Attributes userID, userRole",
+        "name" : "Attribute userID, userRole hinzufügen",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -140,7 +140,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "624e8d8c-4e23-3acd-9530-da36150ba199",
-        "name" : "LogAttribute for Success FlowFiles",
+        "name" : "Attribute für erfolgreiche FlowFiles loggen",
         "type" : "PROCESSOR"
       },
       "flowFileExpiration" : "0 sec",
@@ -157,7 +157,7 @@
         "comments" : "",
         "groupId" : "flow-contents-group",
         "id" : "3069f274-f4bb-3d6b-0000-00000ca62602",
-        "name" : "Fetch Data from API <dummyjson.com/users>",
+        "name" : "Daten von der API abrufen <dummyjson.com/users>",
         "type" : "PROCESSOR"
       },
       "zIndex" : 0
@@ -186,7 +186,7 @@
       "groupIdentifier" : "flow-contents-group",
       "height" : 150.0,
       "identifier" : "c55ebcf3-91ac-30d7-a97c-dc4e0efc34bd",
-      "label" : "This is the final result of the exercise: \"Processors and Connections\"",
+      "label" : "Finales Ergebnis von \"Processors and Connections\"",
       "position" : {
         "x" : 464.4676255549757,
         "y" : 50.30868420685215
@@ -221,7 +221,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "1318a0ce-1356-3a86-0000-00001bc88e85",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Add Attributes userID, userRole",
+      "name" : "Attribute userID, userRole hinzufügen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -312,7 +312,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "3069f274-f4bb-3d6b-0000-00000ca62602",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Fetch Data from API <dummyjson.com/users>",
+      "name" : "Daten von der API abrufen <dummyjson.com/users>",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
@@ -617,7 +617,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "fa452d1b-3cb0-32ef-97bb-e0d68503366a",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "LogAttribute for Failure FlowFiles",
+      "name" : "Attribute für gescheiterte FlowFiles loggen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 552.0,
@@ -728,7 +728,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "624e8d8c-4e23-3acd-9530-da36150ba199",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "LogAttribute for Success FlowFiles",
+      "name" : "Attribute für erfolgreiche FlowFiles loggen",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : 552.0,
@@ -839,7 +839,7 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "fc191f9c-109e-39f3-0000-00004b4329b1",
       "maxBackoffPeriod" : "10 mins",
-      "name" : "Split Each User",
+      "name" : "User aufteilen in je ein FlowFile",
       "penaltyDuration" : "30 sec",
       "position" : {
         "x" : -144.0,
