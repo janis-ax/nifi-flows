@@ -212,7 +212,7 @@
           "comments" : "",
           "groupId" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
           "id" : "25d93c2f-a682-39ba-b707-266d3b037d98",
-          "name" : "Datenabfrage von <dummyjson.com/users> API",
+          "name" : "Datenabfrage von <jsonplaceholder/users> API",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -326,7 +326,7 @@
         "groupIdentifier" : "833e0233-64c1-38f6-8bf3-cfee5ca7ec62",
         "identifier" : "25d93c2f-a682-39ba-b707-266d3b037d98",
         "maxBackoffPeriod" : "10 mins",
-        "name" : "Datenabfrage von <dummyjson.com/users> API",
+        "name" : "Datenabfrage von <jsonplaceholder/users> API",
         "penaltyDuration" : "30 sec",
         "position" : {
           "x" : -176.00006351277784,
@@ -342,7 +342,7 @@
           "Socket Read Timeout" : "15 secs",
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
-          "HTTP URL" : "https://dummyjson.com/users",
+          "HTTP URL" : "https://jsonplaceholder.typicode.com/users",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
           "Socket Write Timeout" : "15 secs",
@@ -642,7 +642,7 @@
           "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
           "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
           "include-zero-record-flowfiles" : "true",
-          "contact_data" : "SELECT \n  firstName || ' ' || lastName AS name,\n  email,\n  phone \nFROM FLOWFILE\n",
+          "contact_data" : "SELECT \n  name,\n  email,\n  phone \nFROM FLOWFILE\n",
           "dbf-default-scale" : "0"
         },
         "propertyDescriptors" : {
@@ -723,7 +723,7 @@
         "properties" : {
           "Max String Length" : "20 MB",
           "Null Value Representation" : "empty string",
-          "JsonPath Expression" : "$.users.*"
+          "JsonPath Expression" : "$.*"
         },
         "propertyDescriptors" : {
           "Max String Length" : {
