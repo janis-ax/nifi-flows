@@ -1,5 +1,14 @@
 {
-  "externalControllerServices" : { },
+  "externalControllerServices" : {
+    "c0f014af-e88a-3f94-a2e6-fcac62dfad5f" : {
+      "identifier" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+      "name" : "JsonRecordSetWriter"
+    },
+    "788287dc-2005-3ff0-bb70-6fe39047ad13" : {
+      "identifier" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+      "name" : "JsonTreeReader"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1753364349860,
     "description" : "Final result of exercise with process groups",
@@ -19,13 +28,72 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "04bc8ca0-803a-364a-966b-3d0b2d48ef7a",
+        "id" : "443c792d-f67f-3ad0-8725-413e664dc45a",
         "name" : "Funnel",
         "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "6ffd74bc-960f-339c-9385-36c0729d386b",
+      "identifier" : "22641ff4-616d-3e1b-bc7b-8cd14bbe26f7",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "merged" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3a5cd164-3685-3bff-a4db-a146c9714d21",
+        "name" : "Vorgesetzte -> ein FlowFile",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "3a5cd164-3685-3bff-a4db-a146c9714d21",
+        "name" : "Vorgesetzte -> ein FlowFile",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "efb957e9-11d0-360e-83e4-05bc5f9e0b84",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "" ],
+      "source" : {
+        "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
+        "id" : "288a2ce3-190c-33e8-8422-60ded87fee7b",
+        "name" : "Vorgesetzte",
+        "type" : "OUTPUT_PORT"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d8b7e708-943a-3069-0000-00000981e4de",
+        "name" : "Mitarbeitende -> ein FlowFile",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "813f8653-df50-3ed5-b786-78f874cb93e7",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -76,25 +144,26 @@
       "destination" : {
         "comments" : "",
         "groupId" : "flow-contents-group",
-        "id" : "443c792d-f67f-3ad0-8725-413e664dc45a",
+        "id" : "04bc8ca0-803a-364a-966b-3d0b2d48ef7a",
         "name" : "Funnel",
         "type" : "FUNNEL"
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "f630d0fa-2c5c-3868-bc7f-d1d19c90e1ad",
+      "identifier" : "2e6e5283-e558-305d-9049-1c1253679c27",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
       "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
       "name" : "",
       "partitioningAttribute" : "",
       "prioritizers" : [ ],
-      "selectedRelationships" : [ "" ],
+      "selectedRelationships" : [ "merged" ],
       "source" : {
-        "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "id" : "288a2ce3-190c-33e8-8422-60ded87fee7b",
-        "name" : "Vorgesetzte",
-        "type" : "OUTPUT_PORT"
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "d8b7e708-943a-3069-0000-00000981e4de",
+        "name" : "Mitarbeitende -> ein FlowFile",
+        "type" : "PROCESSOR"
       },
       "zIndex" : 0
     } ],
@@ -103,7 +172,16 @@
     "defaultBackPressureObjectThreshold" : 10000,
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
-    "externalControllerServiceReferences" : { },
+    "externalControllerServiceReferences" : {
+      "c0f014af-e88a-3f94-a2e6-fcac62dfad5f" : {
+        "identifier" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+        "name" : "JsonRecordSetWriter"
+      },
+      "788287dc-2005-3ff0-bb70-6fe39047ad13" : {
+        "identifier" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+        "name" : "JsonTreeReader"
+      }
+    },
     "flowFileConcurrency" : "UNBOUNDED",
     "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
     "funnels" : [ {
@@ -111,16 +189,16 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "443c792d-f67f-3ad0-8725-413e664dc45a",
       "position" : {
-        "x" : 440.0,
-        "y" : 360.0
+        "x" : 352.0,
+        "y" : 536.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "04bc8ca0-803a-364a-966b-3d0b2d48ef7a",
       "position" : {
-        "x" : 792.0,
-        "y" : 360.0
+        "x" : 848.0,
+        "y" : 536.0
       }
     } ],
     "identifier" : "flow-contents-group",
@@ -1239,7 +1317,247 @@
       "scheduledState" : "ENABLED",
       "statelessFlowTimeout" : "1 min"
     } ],
-    "processors" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "3a5cd164-3685-3bff-a4db-a146c9714d21",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Vorgesetzte -> ein FlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 224.0,
+        "y" : 344.0
+      },
+      "properties" : {
+        "Attribute Strategy" : "Keep Only Common Attributes",
+        "min-records" : "5",
+        "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+        "merge-strategy" : "Bin-Packing Algorithm",
+        "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+        "max-records" : "5",
+        "min-bin-size" : "0 B",
+        "max.bin.count" : "10"
+      },
+      "propertyDescriptors" : {
+        "max-bin-age" : {
+          "displayName" : "Max Bin Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-age",
+          "sensitive" : false
+        },
+        "correlation-attribute-name" : {
+          "displayName" : "Correlation Attribute Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "correlation-attribute-name",
+          "sensitive" : false
+        },
+        "Attribute Strategy" : {
+          "displayName" : "Attribute Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attribute Strategy",
+          "sensitive" : false
+        },
+        "min-records" : {
+          "displayName" : "Minimum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-records",
+          "sensitive" : false
+        },
+        "max-bin-size" : {
+          "displayName" : "Maximum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-size",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "merge-strategy" : {
+          "displayName" : "Merge Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "merge-strategy",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "max-records" : {
+          "displayName" : "Maximum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-records",
+          "sensitive" : false
+        },
+        "min-bin-size" : {
+          "displayName" : "Minimum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-bin-size",
+          "sensitive" : false
+        },
+        "max.bin.count" : {
+          "displayName" : "Maximum Number of Bins",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.bin.count",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.MergeRecord",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d8b7e708-943a-3069-0000-00000981e4de",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Mitarbeitende -> ein FlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 696.0,
+        "y" : 336.0
+      },
+      "properties" : {
+        "Attribute Strategy" : "Keep Only Common Attributes",
+        "min-records" : "25",
+        "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+        "merge-strategy" : "Bin-Packing Algorithm",
+        "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+        "max-records" : "25",
+        "min-bin-size" : "0 B",
+        "max.bin.count" : "10"
+      },
+      "propertyDescriptors" : {
+        "max-bin-age" : {
+          "displayName" : "Max Bin Age",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-age",
+          "sensitive" : false
+        },
+        "correlation-attribute-name" : {
+          "displayName" : "Correlation Attribute Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "correlation-attribute-name",
+          "sensitive" : false
+        },
+        "Attribute Strategy" : {
+          "displayName" : "Attribute Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Attribute Strategy",
+          "sensitive" : false
+        },
+        "min-records" : {
+          "displayName" : "Minimum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-records",
+          "sensitive" : false
+        },
+        "max-bin-size" : {
+          "displayName" : "Maximum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-bin-size",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "merge-strategy" : {
+          "displayName" : "Merge Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "merge-strategy",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "max-records" : {
+          "displayName" : "Maximum Number of Records",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-records",
+          "sensitive" : false
+        },
+        "min-bin-size" : {
+          "displayName" : "Minimum Bin Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "min-bin-size",
+          "sensitive" : false
+        },
+        "max.bin.count" : {
+          "displayName" : "Maximum Number of Bins",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max.bin.count",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.MergeRecord",
+      "yieldDuration" : "1 sec"
+    } ],
     "remoteProcessGroups" : [ ],
     "scheduledState" : "ENABLED",
     "statelessFlowTimeout" : "1 min"
