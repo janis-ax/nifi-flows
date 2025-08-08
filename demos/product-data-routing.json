@@ -1,4 +1,18 @@
 {
+  "externalControllerServices" : {
+    "738f484d-a9db-36f8-8817-07c99dde382b" : {
+      "identifier" : "738f484d-a9db-36f8-8817-07c99dde382b",
+      "name" : "AvroRecordSetWriter"
+    },
+    "600c16fd-3584-32ea-bdba-6ec4828f24d8" : {
+      "identifier" : "600c16fd-3584-32ea-bdba-6ec4828f24d8",
+      "name" : "AvroReader"
+    },
+    "267e0ee2-6279-3b2c-aee0-9c87a1a498e6" : {
+      "identifier" : "267e0ee2-6279-3b2c-aee0-9c87a1a498e6",
+      "name" : "CSVReader"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1754642234616,
     "description" : "",
@@ -7,5 +21,508 @@
     "name" : "product-data-routing",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e4-0198-1000-9e80-4012a3a8f81c",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e9-0198-1000-82e0-8817ac308ad4",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "haushalt" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e0-0198-1000-28f5-1402b00d0d8e",
+        "name" : "Produkte nach Kategorie filtern",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 17
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e2-0198-1000-a141-bd4d6fcadb93",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e7-0198-1000-0948-33b6d1db9881",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "elektronik" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e0-0198-1000-28f5-1402b00d0d8e",
+        "name" : "Produkte nach Kategorie filtern",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 4
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e0-0198-1000-28f5-1402b00d0d8e",
+        "name" : "Produkte nach Kategorie filtern",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e8-0198-1000-7b6b-226ef2528b6d",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2df-0198-1000-4c31-20c2257eae39",
+        "name" : "CSV to JSON",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 3
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e3-0198-1000-80df-c0b19deb92f7",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2eb-0198-1000-680a-5d32035ef46e",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "bücher" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e0-0198-1000-28f5-1402b00d0d8e",
+        "name" : "Produkte nach Kategorie filtern",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 16
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2df-0198-1000-4c31-20c2257eae39",
+        "name" : "CSV to JSON",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2ea-0198-1000-658d-c9dff7b12cc8",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "88cee2e1-0198-1000-db7d-6273e65a2b7d",
+        "name" : "Erstelle Produktliste in CSV",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 1
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : {
+      "738f484d-a9db-36f8-8817-07c99dde382b" : {
+        "identifier" : "738f484d-a9db-36f8-8817-07c99dde382b",
+        "name" : "AvroRecordSetWriter"
+      },
+      "600c16fd-3584-32ea-bdba-6ec4828f24d8" : {
+        "identifier" : "600c16fd-3584-32ea-bdba-6ec4828f24d8",
+        "name" : "AvroReader"
+      },
+      "267e0ee2-6279-3b2c-aee0-9c87a1a498e6" : {
+        "identifier" : "267e0ee2-6279-3b2c-aee0-9c87a1a498e6",
+        "name" : "CSVReader"
+      }
+    },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e2-0198-1000-a141-bd4d6fcadb93",
+      "position" : {
+        "x" : -632.1666787875993,
+        "y" : 3.8333524744787155
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e4-0198-1000-9e80-4012a3a8f81c",
+      "position" : {
+        "x" : -32.16667878759927,
+        "y" : 203.83335247447872
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e3-0198-1000-80df-c0b19deb92f7",
+      "position" : {
+        "x" : -464.16667878759927,
+        "y" : 203.83335247447872
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 72.0,
+      "identifier" : "88cee2e6-0198-1000-530c-ebffbc30f544",
+      "label" : "Alle Produkte nach Kategorie filtern\n-> QueryRecord",
+      "position" : {
+        "x" : -384.16667878759927,
+        "y" : -92.16664752552128
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 176.0,
+      "zIndex" : 1
+    }, {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 72.0,
+      "identifier" : "88cee2e5-0198-1000-6320-78ad36f2b9c2",
+      "label" : "CSV umwandeln in einheitliches Format, wie JSON in Apache NiFi",
+      "position" : {
+        "x" : 143.83332121240073,
+        "y" : -84.16664752552128
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 176.0,
+      "zIndex" : 1
+    } ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Demo ConvertRecord und QueryRecord",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.4.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e1-0198-1000-db7d-6273e65a2b7d",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Erstelle Produktliste in CSV",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 279.83332121240073,
+        "y" : -252.16664752552128
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "mime-type" : "CSV",
+        "generate-ff-custom-text" : "ProduktID;Name;Kategorie;Preis\nP001;Einkaufswagen;Haushalt;89.99\nP002;USB-C Ladegerät;Elektronik;19.99\nP003;Staubsauger;Haushalt;149.99\nP004;Wasserkocher;Haushalt;39.99\nP005;Roman: Die Reise;Bücher;14.99\nP006;Bluetooth Kopfhörer;Elektronik;59.99\nP007;Kochbuch: Vegan genießen;Bücher;24.99\nP008;Mikrowelle;Haushalt;129.99\nP009;Kinderbuch: Abenteuer im Wald;Bücher;12.99\nP010;Smartphone;Elektronik;499.99",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "original", "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.4.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2e0-0198-1000-28f5-1402b00d0d8e",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Produkte nach Kategorie filtern",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -344.16667878759927,
+        "y" : -44.166647525521284
+      },
+      "properties" : {
+        "dbf-default-precision" : "10",
+        "bücher" : "SELECT *\nFROM FLOWFILE\nWHERE Kategorie = 'Bücher'",
+        "record-writer" : "738f484d-a9db-36f8-8817-07c99dde382b",
+        "record-reader" : "600c16fd-3584-32ea-bdba-6ec4828f24d8",
+        "include-zero-record-flowfiles" : "true",
+        "elektronik" : "SELECT *\nFROM FLOWFILE\nWHERE Kategorie = 'Elektronik'",
+        "haushalt" : "SELECT *\nFROM FLOWFILE\nWHERE Kategorie = 'Haushalt'",
+        "dbf-default-scale" : "0"
+      },
+      "propertyDescriptors" : {
+        "dbf-default-precision" : {
+          "displayName" : "Default Decimal Precision",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "dbf-default-precision",
+          "sensitive" : false
+        },
+        "bücher" : {
+          "displayName" : "bücher",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "bücher",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "include-zero-record-flowfiles" : {
+          "displayName" : "Include Zero Record FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "include-zero-record-flowfiles",
+          "sensitive" : false
+        },
+        "elektronik" : {
+          "displayName" : "elektronik",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "elektronik",
+          "sensitive" : false
+        },
+        "haushalt" : {
+          "displayName" : "haushalt",
+          "dynamic" : true,
+          "identifiesControllerService" : false,
+          "name" : "haushalt",
+          "sensitive" : false
+        },
+        "dbf-default-scale" : {
+          "displayName" : "Default Decimal Scale",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "dbf-default-scale",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.QueryRecord",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.4.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "88cee2df-0198-1000-4c31-20c2257eae39",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "CSV to JSON",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 279.83332121240073,
+        "y" : -44.166647525521284
+      },
+      "properties" : {
+        "Include Zero Record FlowFiles" : "true",
+        "Record Writer" : "738f484d-a9db-36f8-8817-07c99dde382b",
+        "Record Reader" : "267e0ee2-6279-3b2c-aee0-9c87a1a498e6"
+      },
+      "propertyDescriptors" : {
+        "Include Zero Record FlowFiles" : {
+          "displayName" : "Include Zero Record FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Zero Record FlowFiles",
+          "sensitive" : false
+        },
+        "Record Writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Writer",
+          "sensitive" : false
+        },
+        "Record Reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Reader",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "mhl_admin",
+    "flowIdentifier" : "product-data-routing",
+    "timestamp" : 0
+  }
 }
