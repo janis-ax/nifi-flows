@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1755179481087,
+    "description" : "",
+    "identifier" : "join-enrichment",
+    "lastModifiedTimestamp" : 1755179481087,
+    "name" : "join-enrichment",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
