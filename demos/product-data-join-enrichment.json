@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1755691058804,
+    "description" : "Ein Dataflow, welcher eine Mengenliste an verkauften Produkten (inkl. Standort und Datum) um den Preis der Produkte anreichert. Im Anschluss wird der Gesamtepreis pro Datum und Standort ausgerechnet und die Datensätze je Standort geroutet.",
+    "identifier" : "product-data-join-enrichment",
+    "lastModifiedTimestamp" : 1755691058804,
+    "name" : "product-data-join-enrichment",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
