@@ -567,7 +567,7 @@
         "Column Name Translation Strategy" : "REMOVE_UNDERSCORE",
         "rollback-on-failure" : "false",
         "put-db-record-binary-format" : "UTF-8",
-        "db-type" : "Generic",
+        "db-type" : "MySQL",
         "put-db-record-table-name" : "userdata",
         "put-db-record-record-reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc"
       },
