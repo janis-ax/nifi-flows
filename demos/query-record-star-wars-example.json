@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1755766120783,
+    "description" : "An easy flow with generates a json and uses different own relationships in query record inclusive the rpath for demonstration reasons",
+    "identifier" : "query-record-star-wars-example",
+    "lastModifiedTimestamp" : 1755766120783,
+    "name" : "query-record-star-wars-example",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
