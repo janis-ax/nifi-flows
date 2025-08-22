@@ -209,7 +209,7 @@
     "inputPorts" : [ ],
     "labels" : [ ],
     "maxConcurrentTasks" : 1,
-    "name" : "Daten in Datenbank laden Teilaufgabe 3",
+    "name" : "Datenbankverbindung Mittel",
     "outputPorts" : [ ],
     "position" : {
       "x" : 0.0,
@@ -854,7 +854,7 @@
       },
       "properties" : {
         "dbf-default-precision" : "10",
-        "contactData" : "SELECT \n\t${now():toNumber()} as userID,\n\tname,\n\tusername,\n\temail,\n\tphone\nFROM FLOWFILE",
+        "contactData" : "SELECT \n\tid as userID,\n\tname,\n\tusername,\n\temail,\n\tphone\nFROM FLOWFILE",
         "record-writer" : "a20c6057-90cf-3bbc-8eee-752d515d5e62",
         "record-reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
         "include-zero-record-flowfiles" : "true",
