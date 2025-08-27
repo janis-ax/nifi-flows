@@ -472,14 +472,14 @@
           "group" : "org.apache.nifi",
           "version" : "2.4.0"
         },
-        "type" : "org.apache.nifi.lookup.RecordLookupService"
+        "type" : "org.apache.nifi.lookup.LookupService"
       }, {
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
           "version" : "2.4.0"
         },
-        "type" : "org.apache.nifi.lookup.LookupService"
+        "type" : "org.apache.nifi.lookup.RecordLookupService"
       } ],
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "a71a2632-0198-1000-3fc5-e7f6c4f00cf6",
@@ -802,14 +802,14 @@
           "group" : "org.apache.nifi",
           "version" : "2.4.0"
         },
-        "type" : "org.apache.nifi.lookup.RecordLookupService"
+        "type" : "org.apache.nifi.lookup.LookupService"
       }, {
         "bundle" : {
           "artifact" : "nifi-standard-services-api-nar",
           "group" : "org.apache.nifi",
           "version" : "2.4.0"
         },
-        "type" : "org.apache.nifi.lookup.LookupService"
+        "type" : "org.apache.nifi.lookup.RecordLookupService"
       } ],
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "a71a2631-0198-1000-9666-c2b164fb6a7f",
@@ -1189,7 +1189,7 @@
       },
       "properties" : {
         "dbf-default-precision" : "10",
-        "Join Strategy" : "Insert Enrichment Fields",
+        "Join Strategy" : "SQL",
         "Insertion Record Path" : "/",
         "Timeout" : "10 min",
         "Original Record Reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
@@ -1197,7 +1197,7 @@
         "Enrichment Record Reader" : "600c16fd-3584-32ea-bdba-6ec4828f24d8",
         "dbf-default-scale" : "0",
         "Maximum number of Bins" : "10000",
-        "SQL" : "SELECT o.*,\n       e.m_sapmotortype_b1000,\n       e.m_ratedpowerkw_b1004,\n       e.m_insulationclass_b1021,\n       e.m_dutycycle_b1012,\n       e.m_voltage_b1010,\n       e.m_speed1_b1067,\n       e.m_framesize_b1001,\n       e.m_powercode_b1002,\n       e.m_poles_b1003       \nFROM original o\n    LEFT OUTER JOIN enrichment e\n        ON 1 = 1\n           AND e.m_motorproductname = o.m_motorproductname\n           AND e.m_efficiencyclass_b1019 = o.m_efficiencyclass_b1019\n           AND e.m_frequency_b1011 = o.m_frequency_b1011"
+        "SQL" : "SELECT o.*, e.*\nFROM original o\nJOIN enrichment e\nON e.Stadt = o.Geschaeftsstelle"
       },
       "propertyDescriptors" : {
         "dbf-default-precision" : {
