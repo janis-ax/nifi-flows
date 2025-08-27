@@ -1,12 +1,12 @@
 {
   "externalControllerServices" : {
-    "c0f014af-e88a-3f94-a2e6-fcac62dfad5f" : {
-      "identifier" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
-      "name" : "JsonRecordSetWriter"
-    },
-    "788287dc-2005-3ff0-bb70-6fe39047ad13" : {
-      "identifier" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+    "d9737c2f-2a39-392d-b358-90e5d8a730bc" : {
+      "identifier" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
       "name" : "JsonTreeReader"
+    },
+    "a20c6057-90cf-3bbc-8eee-752d515d5e62" : {
+      "identifier" : "a20c6057-90cf-3bbc-8eee-752d515d5e62",
+      "name" : "JsonRecordSetWriter"
     }
   },
   "flow" : {
@@ -173,13 +173,13 @@
     "defaultFlowFileExpiration" : "0 sec",
     "executionEngine" : "INHERITED",
     "externalControllerServiceReferences" : {
-      "c0f014af-e88a-3f94-a2e6-fcac62dfad5f" : {
-        "identifier" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
-        "name" : "JsonRecordSetWriter"
-      },
-      "788287dc-2005-3ff0-bb70-6fe39047ad13" : {
-        "identifier" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+      "d9737c2f-2a39-392d-b358-90e5d8a730bc" : {
+        "identifier" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
         "name" : "JsonTreeReader"
+      },
+      "a20c6057-90cf-3bbc-8eee-752d515d5e62" : {
+        "identifier" : "a20c6057-90cf-3bbc-8eee-752d515d5e62",
+        "name" : "JsonRecordSetWriter"
       }
     },
     "flowFileConcurrency" : "UNBOUNDED",
@@ -220,6 +220,35 @@
         "bends" : [ ],
         "componentType" : "CONNECTION",
         "destination" : {
+          "comments" : "",
+          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
+          "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
+          "name" : "User in FlowFiles aufteilen",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
+        "identifier" : "9043c7a6-eeab-374f-8478-7c6b34ea1f15",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "" ],
+        "source" : {
+          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
+          "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
+          "name" : "Nutzerdaten in FlowFiles",
+          "type" : "INPUT_PORT"
+        },
+        "zIndex" : 0
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "288a2ce3-190c-33e8-8422-60ded87fee7b",
           "name" : "Vorgesetzte",
@@ -251,27 +280,28 @@
         "destination" : {
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
-          "name" : "User in FlowFiles aufteilen",
+          "id" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
+          "name" : "UserRole als Attribute hinzugefügt",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "9043c7a6-eeab-374f-8478-7c6b34ea1f15",
+        "identifier" : "5a3148df-73db-345a-8911-9d7755fce469",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
         "name" : "",
         "partitioningAttribute" : "",
         "prioritizers" : [ ],
-        "selectedRelationships" : [ "" ],
+        "selectedRelationships" : [ "split" ],
         "source" : {
+          "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "62643f0b-a419-3e2a-9c9d-6703872c867f",
-          "name" : "Nutzerdaten in FlowFiles",
-          "type" : "INPUT_PORT"
+          "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
+          "name" : "User in FlowFiles aufteilen",
+          "type" : "PROCESSOR"
         },
-        "zIndex" : 0
+        "zIndex" : 1
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -309,36 +339,6 @@
         "destination" : {
           "comments" : "",
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
-          "name" : "Zeistempel und .json im FlowFile Namen",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "8bbc7748-93db-35e1-ffff-ffffcf2e42ce",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "matched" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
-          "name" : "UserId als FlowFile Name",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "908e57bd-539f-3ec1-ffff-ffffcf2e42ce",
           "name" : "Gehalt als Attribut hinzugefügt",
           "type" : "PROCESSOR"
@@ -358,66 +358,6 @@
           "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
           "id" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
           "name" : "UserRole als Attribute hinzugefügt",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "1dfdb0cf-a3d4-37f4-ffff-ffffcf2e42ce",
-          "name" : "UserRole als Attribute hinzugefügt",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "d02e13be-97d3-3e0f-ffff-ffffcf2e42ce",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
-          "name" : "Zeistempel und .json im FlowFile Namen",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 0
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
-          "name" : "UserId als FlowFile Name",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "f233f180-cb83-3d63-ffff-ffffcf2e42ce",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "split" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-          "id" : "28180ab9-f977-3c9f-ffff-ffffcf2e42ce",
-          "name" : "User in FlowFiles aufteilen",
           "type" : "PROCESSOR"
         },
         "zIndex" : 0
@@ -471,8 +411,8 @@
         "name" : "Nutzerdaten in FlowFiles",
         "portFunction" : "STANDARD",
         "position" : {
-          "x" : -128.0,
-          "y" : -664.0
+          "x" : -120.0,
+          "y" : -304.0
         },
         "scheduledState" : "ENABLED",
         "type" : "INPUT_PORT"
@@ -519,165 +459,9 @@
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
         "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.2.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "8a4d41e4-1336-3d34-ffff-ffffcf2e42ce",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "Zeistempel und .json im FlowFile Namen",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -179.99995515860337,
-          "y" : -159.90002621589417
-        },
-        "properties" : {
-          "filename" : "${filename:append(\"-\"):append(${now():format(\"dd-HH-mm-ss\")}):append(\".json\")}",
-          "Store State" : "Do not store state",
-          "canonical-value-lookup-cache-size" : "100"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "filename" : {
-            "displayName" : "filename",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "filename",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "canonical-value-lookup-cache-size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "canonical-value-lookup-cache-size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "failure", "unmatched" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "8e44f724-55d2-358a-bd53-f95453f74c29",
-        "identifier" : "50bbdd94-e226-30fe-ffff-ffffcf2e42ce",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "UserId als FlowFile Name",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -179.99995515860337,
-          "y" : -351.9000262158942
-        },
-        "properties" : {
-          "Destination" : "flowfile-attribute",
-          "filename" : "$.id",
-          "Max String Length" : "20 MB",
-          "Return Type" : "auto-detect",
-          "Null Value Representation" : "empty string",
-          "Path Not Found Behavior" : "ignore"
-        },
-        "propertyDescriptors" : {
-          "Destination" : {
-            "displayName" : "Destination",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Destination",
-            "sensitive" : false
-          },
-          "filename" : {
-            "displayName" : "filename",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "filename",
-            "sensitive" : false
-          },
-          "Max String Length" : {
-            "displayName" : "Max String Length",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Max String Length",
-            "sensitive" : false
-          },
-          "Return Type" : {
-            "displayName" : "Return Type",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Return Type",
-            "sensitive" : false
-          },
-          "Null Value Representation" : {
-            "displayName" : "Null Value Representation",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Null Value Representation",
-            "sensitive" : false
-          },
-          "Path Not Found Behavior" : {
-            "displayName" : "Path Not Found Behavior",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Path Not Found Behavior",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.EvaluateJsonPath",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.4.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -728,7 +512,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.4.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -740,8 +524,8 @@
         "name" : "User in FlowFiles aufteilen",
         "penaltyDuration" : "30 sec",
         "position" : {
-          "x" : -179.99995515860337,
-          "y" : -559.9000262158942
+          "x" : -176.30764482535142,
+          "y" : -185.7462023633551
         },
         "properties" : {
           "Max String Length" : "20 MB",
@@ -787,7 +571,7 @@
         "bundle" : {
           "artifact" : "nifi-update-attribute-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.4.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -860,7 +644,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.4.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1014,7 +798,7 @@
         "bundle" : {
           "artifact" : "nifi-standard-nar",
           "group" : "org.apache.nifi",
-          "version" : "2.2.0"
+          "version" : "2.4.0"
         },
         "comments" : "",
         "componentType" : "PROCESSOR",
@@ -1039,6 +823,7 @@
           "Socket Read Timeout" : "15 secs",
           "Socket Idle Connections" : "5",
           "Request Body Enabled" : "true",
+          "OAuth2 Access Token Refresh Strategy" : "ON_TOKEN_EXPIRATION",
           "HTTP URL" : "https://dummyjson.com/users",
           "Socket Idle Timeout" : "5 mins",
           "Response Redirects Enabled" : "True",
@@ -1139,6 +924,13 @@
             "dynamic" : false,
             "identifiesControllerService" : false,
             "name" : "Request Body Enabled",
+            "sensitive" : false
+          },
+          "OAuth2 Access Token Refresh Strategy" : {
+            "displayName" : "OAuth2 Access Token Refresh Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "OAuth2 Access Token Refresh Strategy",
             "sensitive" : false
           },
           "HTTP URL" : {
@@ -1324,7 +1116,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2.2.0"
+        "version" : "2.4.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -1342,9 +1134,9 @@
       "properties" : {
         "Attribute Strategy" : "Keep Only Common Attributes",
         "min-records" : "5",
-        "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+        "record-writer" : "a20c6057-90cf-3bbc-8eee-752d515d5e62",
         "merge-strategy" : "Bin-Packing Algorithm",
-        "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+        "record-reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
         "max-records" : "5",
         "min-bin-size" : "0 B",
         "max.bin.count" : "10"
@@ -1444,7 +1236,7 @@
       "bundle" : {
         "artifact" : "nifi-standard-nar",
         "group" : "org.apache.nifi",
-        "version" : "2.2.0"
+        "version" : "2.4.0"
       },
       "comments" : "",
       "componentType" : "PROCESSOR",
@@ -1462,9 +1254,9 @@
       "properties" : {
         "Attribute Strategy" : "Keep Only Common Attributes",
         "min-records" : "25",
-        "record-writer" : "c0f014af-e88a-3f94-a2e6-fcac62dfad5f",
+        "record-writer" : "a20c6057-90cf-3bbc-8eee-752d515d5e62",
         "merge-strategy" : "Bin-Packing Algorithm",
-        "record-reader" : "788287dc-2005-3ff0-bb70-6fe39047ad13",
+        "record-reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc",
         "max-records" : "25",
         "min-bin-size" : "0 B",
         "max.bin.count" : "10"
@@ -1567,7 +1359,7 @@
   "parameterContexts" : { },
   "parameterProviders" : { },
   "snapshotMetadata" : {
-    "author" : "admin",
+    "author" : "mhl_admin",
     "flowIdentifier" : "process-group",
     "timestamp" : 0
   }
