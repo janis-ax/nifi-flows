@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1756381092483,
+    "description" : "Eine kurzer Dataflow, welcher eine IP zwischen 1 und 300 generiert und in das Attribut, der generierten FlowFiles schreibt. Diese werden dann mit der ID ausgelesen und die API wird abgefragt. Mithilfe von Logging Prozessoren, werden die Anfragen geloggt.",
+    "identifier" : "monitoring",
+    "lastModifiedTimestamp" : 1756381092483,
+    "name" : "monitoring",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
