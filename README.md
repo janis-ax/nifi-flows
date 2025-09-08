@@ -2,6 +2,7 @@
 
 - [Ablage der ORDIX AG für die Apache NiFi Grundlagen Seminar](#ablage-der-ordix-ag-für-die-apache-nifi-grundlagen-seminar)
   - [Struktur des Repos](#struktur-des-repos)
+  - [Hinzufügen der Demos oder Lösungen in eine bestehende NiFi Instanz über GitHub](#hinzufügen-der-demos-oder-lösungen-in-eine-bestehende-nifi-instanz-über-github)
   - [Demo Übersicht](#demo-übersicht)
   - [Übungen Übersicht](#übungen-übersicht)
 
@@ -27,12 +28,36 @@ uebungen/
 Readme.md
 ```
 
-Unter Demos befinden sich alle Flowdefinition. Eine Übersicht aller enthaltener Demos ist hier zu finden: [Demo Übersicht](#demo-übersicht)
+Unter **Demos** befinden sich alle Flowdefinition. Eine Übersicht aller enthaltener Demos ist hier zu finden: [Demo Übersicht](#demo-übersicht)
 
-Im Ordner Sicherheitskopie befindet sich der Response der Dummy URLs : [Dummy Json User](https://dummyjson.com/users) und [Placeholder Json User](https://jsonplaceholder.typicode.com/users). Da ein Großteil der Übungen auf diesen beiden URLs aufbaut, kann mit diesen JSON-Dateien anstatt eines InvokeHTTP Prozessors eine GenerateFlowFile Prozessor eingefügt werden, der fast keinen Unterschied für die Übungen darstellt.
+Im Ordner **Sicherheitskopie** befindet sich der Response der Dummy URLs : [Dummy Json User](https://dummyjson.com/users) und [Placeholder Json User](https://jsonplaceholder.typicode.com/users). Da ein Großteil der Übungen auf diesen beiden URLs aufbaut, kann mit diesen JSON-Dateien anstatt eines InvokeHTTP Prozessors eine GenerateFlowFile Prozessor eingefügt werden, der fast keinen Unterschied für die Übungen darstellt.
 
-Unter „Übungen“ befinden sich sämtliche Flow-Definitionen sowie die Aufgabenstellungen zu den einzelnen Übungen. Diese sind jeweils in Verzeichnissen abgelegt, deren Namen den entsprechenden Foliensätzen entsprechen. Das bedeutet: Eine Übung im Ordner „Services“ kann erst an die Seminarteilnehmer ausgegeben werden, nachdem zuvor der Foliensatz „Services“ behandelt wurde.
+Unter **„Übungen“** befinden sich sämtliche Flow-Definitionen sowie die Aufgabenstellungen zu den einzelnen Übungen. Diese sind jeweils in Verzeichnissen abgelegt, deren Namen den entsprechenden Foliensätzen im Seminar entsprechen. Das bedeutet: Eine Übung im Ordner „Services“ kann erst an die Seminarteilnehmer ausgegeben werden, nachdem zuvor der Foliensatz „Services“ behandelt wurde.
 In der Übersicht sind auch Aufgaben enthalten, die keine Flowdefinitions brauchen: [Übungen Übersicht](#übungen-übersicht)
+
+## Hinzufügen der Demos oder Lösungen in eine bestehende NiFi Instanz über GitHub
+
+Dieses Repository kann in jede NiFi Instanz ab NiFi 2.0 als Registry Client (GitHubFlowRegistryClient) hinterlegt werden.
+
+Folgende Konfiguration muss genutzt werden:
+
+````txt
+GitHub API URL: https://api.github.com/
+Repository Owner: janis-ax
+Repository Name: nifi-flows
+Default Branch: main
+Repository Path: je nachdem ob uebungen oder demos gebraucht werden --> Anpassung
+Directory Filter Exclusion: [.].*
+````
+
+Die Auth-Konfiguration ist intern entnommen werden.
+
+Der **Repository Path** muss angepasst werden, je nachdem ob *uebungen* oder *demos* gezeigt werden sollen:
+
+| Anzuzeigen in NiFi  | Repository Path | Als Bucket in NiFi|
+| --------------- | ---------- | ---------- |
+| uebungen  | uebungen | die einzelnen Ordner im uebungen Ordner |
+| demos | Property leer lassen | demos, sicherheitskopie und uebungen (Aber nur in Demos welche enthalten) |
 
 ## Demo Übersicht
 
