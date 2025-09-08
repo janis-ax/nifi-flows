@@ -16,12 +16,13 @@ demos/
 sicherheitskopie/
 └── json-Dateien von den beiden Repos
 uebungen/
-├── processors-and-connection/
-│   ├── advanced-processors-and-connections.md
-│   ├── easy-processors-and-connections.md
-│   ├── processors-and-connections.json
-│   ├── rpath-in-query-record.json
-│   └── rpath-in-query-record.md
+├── erweiterte-flow-komponente/
+│   └── einfach-processgroups.md
+├── expression-language/
+│   ├── bereinige-attribute.json
+│   ├── bereinige-attribute.md
+│   ├── expression-language.json
+│   └── expression-language.md
 └── ...
 Readme.md
 ```
@@ -30,7 +31,8 @@ Unter Demos befinden sich alle Flowdefinition. Eine Übersicht aller enthaltener
 
 Im Ordner Sicherheitskopie befindet sich der Response der Dummy URLs : [Dummy Json User](https://dummyjson.com/users) und [Placeholder Json User](https://jsonplaceholder.typicode.com/users). Da ein Großteil der Übungen auf diesen beiden URLs aufbaut, kann mit diesen JSON-Dateien anstatt eines InvokeHTTP Prozessors eine GenerateFlowFile Prozessor eingefügt werden, der fast keinen Unterschied für die Übungen darstellt.
 
-Unter Übungen befinden sich alle Flowdefinitions, sowie die Aufgabenbeschreibungen für die verschiedenen Übungen. Eine Übersicht über alle Aufgaben befindet sich hier. In der Übersicht sind auch Aufgaben enthalten, die keine Flowdefinitions brauchen: [Übungen Übersicht](#übungen-übersicht)
+Unter „Übungen“ befinden sich sämtliche Flow-Definitionen sowie die Aufgabenstellungen zu den einzelnen Übungen. Diese sind jeweils in Verzeichnissen abgelegt, deren Namen den entsprechenden Foliensätzen entsprechen. Das bedeutet: Eine Übung im Ordner „Services“ kann erst an die Seminarteilnehmer ausgegeben werden, nachdem zuvor der Foliensatz „Services“ behandelt wurde.
+In der Übersicht sind auch Aufgaben enthalten, die keine Flowdefinitions brauchen: [Übungen Übersicht](#übungen-übersicht)
 
 ## Demo Übersicht
 
@@ -42,22 +44,22 @@ Unter Übungen befinden sich alle Flowdefinitions, sowie die Aufgabenbeschreibun
 
 ## Übungen Übersicht
 
-| Kategorie | behandelte Processoren  |  behandelte Themen  |Level |Flowdefinition|
+| Aufgabenbeschreibung | behandelte Processoren  |  behandelte Themen  |Level |Flowdefinition|
 | ----- | ---------- | ---------- |----|----|
 | **Processors und Connections** |||||
-| [Easy-processcors and connections](/uebungen/easy-processors-and-connections.md) | InvokeHTTP | FlowFiles, Relationships, Funnel | sehr leicht | nicht nötig |
-| [Medium-processcors and connections](/uebungen/medium-processors-and-connections.md) | InvokeHTTP, EvaluateJSONPath, SplitJSON | Scheduling, Log-Level,Properties, Namensänderung, JSON Path, Relationships, Prioritizers, Back Pressure| mittel | [Flow Definition](uebungen/processors-and-connections.json) |
-| [RPath in Query Record](/uebungen/rpath-with-query-record.md) | QueryRecord | RPath, RPath_String |mittel|[Flow Definition](uebungen/rpath-in-query-record.json)|
+| [Einfache Übung zu Processors and Connections](/uebungen/processors-and-connection/einfach-processors-and-connections.md) | InvokeHTTP | FlowFiles, Relationships, Funnel | sehr leicht | nicht nötig |
+| [Mittlere Übung zu Processors and Connections](/uebungen/processors-and-connection/mittel-processors-and-connections.md) | InvokeHTTP, EvaluateJSONPath, SplitJSON | Scheduling, Log-Level,Properties, Namensänderung, JSON Path, Relationships, Prioritizers, Back Pressure| mittel | [Flow Definition](uebungen/processors-and-connection/mittel-processors-and-connections.json) |
+| [RPath in Query Record](/uebungen/processors-and-connection/rpath-with-query-record.md) | QueryRecord | RPath, RPath_String |mittel|[Flow Definition](uebungen/processors-and-connection/rpath-in-query-record.json)|
 | **Expression Language** |||||
-| [Expression Language](/uebungen/expression-language.md) | InvokeHTTP, SplitJson,UpdateAttribute, RouteOnAttribute | Scheduling,Properties, Expression Language, JsonPath| leicht | [Flow Definition](uebungen/expression-language.json) |
-| [Bereinige Attribute](/uebungen/BereinigeAttribute.md) | InvokeHTTP, EvaluteJSONPath, UpdateAttribute, GenerateFlowFile | Properties, Expression Language| leicht | [Flow Definition](uebungen/bereinige-attribute.json) |
+| [Expression Language](/uebungen/expression-language/expression-language.md) | InvokeHTTP, SplitJson,UpdateAttribute, RouteOnAttribute | Scheduling,Properties, Expression Language, JsonPath| leicht | [Flow Definition](uebungen/expression-language/expression-language.json) |
+| [Bereinige Attribute](/uebungen/expression-language/bereinige-attribute.md) | InvokeHTTP, EvaluteJSONPath, UpdateAttribute, GenerateFlowFile | Properties, Expression Language| leicht | [Flow Definition](uebungen/expression-language/expression-language.json) |
 | **Erweiterte Flow-Komponenten** |||||
-| [Einfache Process Group Übung](/uebungen/easy-processgroups.md) |  |  Processgroups, In/Out Port, **Achtung, zumindest die Expression Language muss erledigt sein** | sehr leicht| nicht nötig|
+| [Einfache Process Group Übung](/uebungen/erweiterte-flow-komponenten/einfach-processgroups.md) |  |  Processgroups, In/Out Port, **Achtung, zumindest die Expression Language muss erledigt sein** | sehr leicht| nicht nötig|
 | **Services** |||||
-| [Erweiterte Flow Komponenten Easy](/uebungen/easy-erweiterte-flow-komponenten.md) | InvokeHTTP, EvaluteJSONPath, SplitJson,UpdateAttribute, RouteOnAttribute, MergeRecord |  Scheduling,Properties, Process Groups (mit In/Out Port), **Services**(JSONTreeReader, JsonRecordWriter)| leicht | [Flow Definition](uebungen/einfach-erweiterte-flow-komponenten.json) |
-| [Erweiterte Flow Komponenten Schwer](/uebungen/hard-erweiterte-flow-komponenten.md) | InvokeHttp, SplitJson, EvaluateJsonPath, UpdateAttribute, QueryRecord, LookupRecord, EvaluateJsonPath, PutFile | Process Groups, Arbeiten mit Attribute und Content, Flow Definition, **Services**(JsonTreeReader, JsonRecordWriter, DatabaseConnectionPool,DatabaseRecordLookupService), Expression Language | schwer |[Flow Definition](uebungen/schwer-erweiterte-flow-komponente.json)|
-| [Datenbankverbindung Einfach](/uebungen/easy-datenbankverbindung.md) | Execute SQL | Service auf Root Ebene: **Database Connection Pool**| leicht | [Flow Definition](uebungen/einfach-datenbankverbindung.json)/nein |
-| [Datenbankverbindung Mittel](/uebungen/medium-datenbankverbindung.md) | ExecuteSQL, InvokeHTTP, QueryRecord,PutDatabaseRecord |  Relationship Retry, Service auf Root Ebene: **Database Connection Pool** (zusätzlich in Teilaufgabe 2 Process Groups und Funnel)| mittel| [Flow Definition](uebungen/medium-datenbankverbindung.json) |
-| [Join Enrichment](/uebungen/join-enrichment//join-enrichment.md)|GenerateFlowFile, ForkEnrichment, JoinEnrichment, EvaluateJsonPath, ExecuteSQLRecord|JoinEnrichment, **Database Connection Pool**|mittel|[Flow Definition](uebungen/join-enrichment.json)|
-| [Monitoring](/uebungen/monitoring.md)|GenerateFlowFile,InvokeHTTP, LogAttribute|ExpressionLanguage, Relationships, Bulletin Board, DataProvenance (inkl. Lineage), **Bonusaufgaben:** ,Flow Configuration History, Summary </br> **Wichtig:** In der Aufgabe sollen die Teilnehmer auch abschätzen, wie viele User von der API bereitgestellt werden. (Ende 100, Anfang 200 ist eine gute Schätzung) -> die API stellt genau 208 zur Verfügung |mittel|[Flow Definition](uebungen/monitoring.json)|
-| [Reporting Task](/uebungen/reporting-task.md)||**Reporting Task:** MonitorMemory, NiFi API| leicht/mittel | keine vonnöten |
+| [Erweiterte Flow Komponenten einfach](/uebungen/services/einfach-erweiterte-flow-komponenten.md) | InvokeHTTP, EvaluteJSONPath, SplitJson,UpdateAttribute, RouteOnAttribute, MergeRecord |  Scheduling,Properties, Process Groups (mit In/Out Port), **Services**(JSONTreeReader, JsonRecordWriter)| leicht | [Flow Definition](uebungen/services/einfach-erweiterte-flow-komponenten.json) |
+| [Erweiterte Flow Komponenten Schwer](/uebungen/services/schwer-erweiterte-flow-komponenten.md) | InvokeHttp, SplitJson, EvaluateJsonPath, UpdateAttribute, QueryRecord, LookupRecord, EvaluateJsonPath, PutFile | Process Groups, Arbeiten mit Attribute und Content, Flow Definition, **Services**(JsonTreeReader, JsonRecordWriter, DatabaseConnectionPool,DatabaseRecordLookupService), Expression Language | schwer |[Flow Definition](uebungen/services/schwer-erweiterte-flow-komponente.json)|
+| [Datenbankverbindung Einfach](/uebungen/services/einfach-datenbankverbindung.md) | Execute SQL | Service auf Root Ebene: **Database Connection Pool**| leicht | [Flow Definition](uebungen/services/einfach-datenbankverbindung.json) |
+| [Datenbankverbindung Mittel](/uebungen/services/mittel-datenbankverbindung.md) | ExecuteSQL, InvokeHTTP, QueryRecord,PutDatabaseRecord |  Relationship Retry, Service auf Root Ebene: **Database Connection Pool** (zusätzlich in Teilaufgabe 2 Process Groups und Funnel)| mittel| [Flow Definition](uebungen/services/mittel-datenbankverbindung.json) |
+| [Join Enrichment](/uebungen/join-enrichment/join-enrichment.md)|GenerateFlowFile, ForkEnrichment, JoinEnrichment, EvaluateJsonPath, ExecuteSQLRecord|JoinEnrichment, **Database Connection Pool**|mittel|[Flow Definition](uebungen/services/join-enrichment.json)|
+| [Monitoring](/uebungen/services/monitoring.md)|GenerateFlowFile,InvokeHTTP, LogAttribute|ExpressionLanguage, Relationships, Bulletin Board, DataProvenance (inkl. Lineage), **Bonusaufgaben:** ,Flow Configuration History, Summary </br> **Wichtig:** In der Aufgabe sollen die Teilnehmer auch abschätzen, wie viele User von der API bereitgestellt werden. (Ende 100, Anfang 200 ist eine gute Schätzung) -> die API stellt genau 208 zur Verfügung |mittel|[Flow Definition](uebungen/services/monitoring.json)|
+| [Reporting Task](/uebungen/services/reporting-task.md)||**Reporting Task:** MonitorMemory, NiFi API| leicht/mittel | keine vonnöten |
