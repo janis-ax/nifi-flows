@@ -43,7 +43,7 @@ Dieses Repository kann in jede NiFi-Instanz ab NiFi 2.0 als Registry-Client (Git
 
 **Folgende Konfiguration muss genutzt werden:**
 
-![GitHub FlowRegistry-Client](githubclient.png)
+![GitHub FlowRegistry-Client](/doc/images/githubclient.png)
 
 Die Auth-Konfiguration kann intern entnommen werden.
 
