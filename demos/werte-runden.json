@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757486089045,
+    "description" : "Werte von Preisen auf zwei Nachkommastellen runden",
+    "identifier" : "werte-runden",
+    "lastModifiedTimestamp" : 1757486089045,
+    "name" : "werte-runden",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
