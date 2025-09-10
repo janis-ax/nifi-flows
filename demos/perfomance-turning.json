@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757487172757,
+    "description" : "Ein kleiner Flow, der zeigt, wie Compressing von FlowFiles zu besser Performance führt.",
+    "identifier" : "perfomance-turning",
+    "lastModifiedTimestamp" : 1757487172757,
+    "name" : "perfomance-turning",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
