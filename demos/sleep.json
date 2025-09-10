@@ -1,4 +1,5 @@
 {
+  "externalControllerServices" : { },
   "flow" : {
     "createdTimestamp" : 1757485845408,
     "description" : "Ein kleiner Flow, welcher Prozessoren mit dem RetryFlowFile Prozessor warten lässt",
@@ -7,5 +8,367 @@
     "name" : "sleep",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "Hiernach sollte der Flow weitergehen",
+        "groupId" : "flow-contents-group",
+        "id" : "7d35a7da-1ca6-3814-a4f6-b1bb6c239098",
+        "name" : "Dummy - Löscht das FlowFile",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2dd06f45-8249-3cfd-8534-554ea8b1455b",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "sleep done",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "retries_exceeded" ],
+      "source" : {
+        "comments" : "Prozessor lässt FlowFiles für die Dauer der Penalty Duration \"schlafen\" -> Also in der Queue warten. Dafür muss auch der Wert für Maximum Retries auf 1 gesetzt werden, damit er nur einmal wartet ",
+        "groupId" : "flow-contents-group",
+        "id" : "d1c1ca1a-2f1f-3814-a551-cddbdaf93d4c",
+        "name" : "Sleep",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "Prozessor lässt FlowFiles für die Dauer der Penalty Duration \"schlafen\" -> Also in der Queue warten. Dafür muss auch der Wert für Maximum Retries auf 1 gesetzt werden, damit er nur einmal wartet ",
+        "groupId" : "flow-contents-group",
+        "id" : "d1c1ca1a-2f1f-3814-a551-cddbdaf93d4c",
+        "name" : "Sleep",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "de33fc87-5b61-36a9-b0a4-9b96fb092bd5",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "7ed25bbb-8356-31a1-9842-7007e977f259",
+        "name" : "Erstelle dummy FlowFIle",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ {
+        "x" : -363.0,
+        "y" : -161.0
+      }, {
+        "x" : -363.0,
+        "y" : -111.0
+      } ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "Prozessor lässt FlowFiles für die Dauer der Penalty Duration \"schlafen\" -> Also in der Queue warten. Dafür muss auch der Wert für Maximum Retries auf 1 gesetzt werden, damit er nur einmal wartet ",
+        "groupId" : "flow-contents-group",
+        "id" : "d1c1ca1a-2f1f-3814-a551-cddbdaf93d4c",
+        "name" : "Sleep",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "75298cb5-f855-303f-bcb6-eec0c667b684",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "wait until sleep time is over",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "retry" ],
+      "source" : {
+        "comments" : "Prozessor lässt FlowFiles für die Dauer der Penalty Duration \"schlafen\" -> Also in der Queue warten. Dafür muss auch der Wert für Maximum Retries auf 1 gesetzt werden, damit er nur einmal wartet ",
+        "groupId" : "flow-contents-group",
+        "id" : "d1c1ca1a-2f1f-3814-a551-cddbdaf93d4c",
+        "name" : "Sleep",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    } ],
+    "controllerServices" : [ ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : { },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Sleep",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ "failure" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "Prozessor lässt FlowFiles für die Dauer der Penalty Duration \"schlafen\" -> Also in der Queue warten. Dafür muss auch der Wert für Maximum Retries auf 1 gesetzt werden, damit er nur einmal wartet ",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "d1c1ca1a-2f1f-3814-a551-cddbdaf93d4c",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Sleep",
+      "penaltyDuration" : "1 min",
+      "position" : {
+        "x" : -832.0,
+        "y" : -200.0
+      },
+      "properties" : {
+        "penalize-retries" : "true",
+        "maximum-retries" : "1",
+        "Fail on Non-numerical Overwrite" : "false",
+        "reuse-mode" : "fail",
+        "retry-attribute" : "flowfile.retries"
+      },
+      "propertyDescriptors" : {
+        "penalize-retries" : {
+          "displayName" : "Penalize Retries",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "penalize-retries",
+          "sensitive" : false
+        },
+        "maximum-retries" : {
+          "displayName" : "Maximum Retries",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "maximum-retries",
+          "sensitive" : false
+        },
+        "Fail on Non-numerical Overwrite" : {
+          "displayName" : "Fail on Non-numerical Overwrite",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Fail on Non-numerical Overwrite",
+          "sensitive" : false
+        },
+        "reuse-mode" : {
+          "displayName" : "Reuse Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "reuse-mode",
+          "sensitive" : false
+        },
+        "retry-attribute" : {
+          "displayName" : "Retry Attribute",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "retry-attribute",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.RetryFlowFile",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ "success" ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-update-attribute-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "Hiernach sollte der Flow weitergehen",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7d35a7da-1ca6-3814-a4f6-b1bb6c239098",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Dummy - Löscht das FlowFile",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -832.0,
+        "y" : 16.0
+      },
+      "properties" : {
+        "Store State" : "Do not store state",
+        "canonical-value-lookup-cache-size" : "100"
+      },
+      "propertyDescriptors" : {
+        "Delete Attributes Expression" : {
+          "displayName" : "Delete Attributes Expression",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Delete Attributes Expression",
+          "sensitive" : false
+        },
+        "Store State" : {
+          "displayName" : "Store State",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Store State",
+          "sensitive" : false
+        },
+        "canonical-value-lookup-cache-size" : {
+          "displayName" : "Cache Value Lookup Cache Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "canonical-value-lookup-cache-size",
+          "sensitive" : false
+        },
+        "Stateful Variables Initial Value" : {
+          "displayName" : "Stateful Variables Initial Value",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Stateful Variables Initial Value",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 25,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "7ed25bbb-8356-31a1-9842-7007e977f259",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "Erstelle dummy FlowFIle",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -832.0,
+        "y" : -400.0
+      },
+      "properties" : {
+        "character-set" : "UTF-8",
+        "File Size" : "0B",
+        "Batch Size" : "1",
+        "Unique FlowFiles" : "false",
+        "Data Format" : "Text"
+      },
+      "propertyDescriptors" : {
+        "character-set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "character-set",
+          "sensitive" : false
+        },
+        "File Size" : {
+          "displayName" : "File Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "File Size",
+          "sensitive" : false
+        },
+        "mime-type" : {
+          "displayName" : "Mime Type",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "mime-type",
+          "sensitive" : false
+        },
+        "generate-ff-custom-text" : {
+          "displayName" : "Custom Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "generate-ff-custom-text",
+          "sensitive" : false
+        },
+        "Batch Size" : {
+          "displayName" : "Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Batch Size",
+          "sensitive" : false
+        },
+        "Unique FlowFiles" : {
+          "displayName" : "Unique FlowFiles",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Unique FlowFiles",
+          "sensitive" : false
+        },
+        "Data Format" : {
+          "displayName" : "Data Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Data Format",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "1 min",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.GenerateFlowFile",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "admin",
+    "flowIdentifier" : "sleep",
+    "timestamp" : 0
+  }
 }
