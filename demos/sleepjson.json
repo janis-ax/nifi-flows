@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757485505170,
+    "description" : "Ein kleiner Flow, welcher Prozessoren mit dem RetryFlowFile Prozessor warten lässt",
+    "identifier" : "sleepjson",
+    "lastModifiedTimestamp" : 1757485505170,
+    "name" : "sleep.json",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
