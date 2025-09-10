@@ -58,9 +58,13 @@ Der **Repository-Path** muss angepasst werden, je nachdem, ob *Übungen* oder *D
 
 | Kategorie: behandelte Processoren  | Zweck der Demos | "Use Case" | Flowdefinition |
 | --------------- | ---------- |----|----|
-| **Processors and Connection:** GenerateFlowFile, QueryRecord | verschiedene Query Records Anfragen (sind ebenfalls in den Folien enthalten), letzte Abfrage ist sehr ähnlich zur Übung | |[Flow Defintion](/demos/query-record-star-wars-example.json)|
+| **Processors and Connection:** GenerateFlowFile, QueryRecord | verschiedene Query Records Anfragen (sind ebenfalls in den Folien enthalten), letzte Abfrage ist sehr ähnlich zur Übung | |[Flow Defintion](/demos/werte-runden.json)|
+|  **Processors and Connection:** GenerateFlowFile, QueryRecord  | Einfache Demo | Werte von Preisen auf zwei Nachkommastellen runden |[Flow Defintion](/demos/product-data-join-enrichment.json)|
+| **Processors and Connection:** GenerateFlowFile, RetryFlowFile | | Ein kleiner Flow, welcher Prozessoren mit dem RetryFlowFile Prozessor warten lässt |[Flow Defintion](/demos/Download-JDBC-Treiberjson.json)|
+|  **Processgroups:** Einfache Prozessoren mit InvokeHTTP, QueryRecord und Processgruppen | Einfache Demo | **Erste Prozessgroup:** Diese Prozessgruppe macht drei verschiedene API-Calls, gegen eine IP aus Italien, Deutschland und den USA. Alternativ kann auch ein JSON-Array über den Input-Port gegeben werden. Danach werden die FlowFiles mit Query-Record gefiltert (nach Deutschland, Italien, USA und andere Nationen). </br> **Zweite Prozessgroup:** Diese Prozessgruppe macht mehrere Abfragen gegen eine API und merged die FlowFiles dann mit der Bin-Packing Strategie.  |[Erste Prozessgruppe](/demos/API-Calls-und-QueryRecord.json) </br> [Zweite Prozessgruppe](/demos/Multiple-Abfragen-Merge.json) |
 | **Services:** ExecuteSQL, ConvertRecord, QueryRecord | Vertiefen der Services inkl. DBCPConnectionPool | Alle Produkte einer Firma, werden aus der Datenbank abgefragt und nach Kategorie geroutet |[Flow Defintion](/demos/product-data-routing.json)|
 | **JoinEnrichment:** ForkEnrichment, JoinEnrichment, ExecuteSQL, QueryRecord  | Zwei Beispiele für JoinEnrichment zeigen, zweite Demo ist sehr ähnlich zur späteren Übung | **Erste:** Die Liste mit der Stückanzahl der verkauften Menge (je Datum und GS-Standort) soll mit den Preisdaten des Produktes anhand der ID angereichert werden. Ziel des Flows sind zwei weitere Spalten in der Tabelle mit "Gesamtpreis/Total" und Preis des Produktes</br> **Zweite:** Gleicher Usecase, nur diesemal nur für eine Verkaufsanzahl von einer GS an einem Tag |[Flow Defintion](/demos/product-data-join-enrichment.json)|
+| **JDBC-Treiber Download:** Download von Postgres und SQL-Datenbank Treibern| Download von JDBC Treibern | Einfache Prozessoren + Parameter |[Flow Defintion](/demos/Download-JDBC-Treiberjson.json)|
 
 ## Übungen Übersicht
 
