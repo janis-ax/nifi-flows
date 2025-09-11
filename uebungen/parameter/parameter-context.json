@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757572057515,
+    "description" : "Zwei Datenbankübungen, in welcher der Service und die Prozessoren den Parameter Context verwenden.",
+    "identifier" : "parameter-context",
+    "lastModifiedTimestamp" : 1757572057515,
+    "name" : "parameter-context",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
