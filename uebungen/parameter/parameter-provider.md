@@ -1,7 +1,7 @@
 # Parameter Provider
 
 Zweck dieser Aufgabe ist es die beiden URLs der APIs, welche in vielen Aufgaben genutzt werden, in einem Parameter Context zu nutzen.
-Dabei sollen die beiden Angaben aus der Datenbank mithilfe eines Parameter Provider einen Parameter Context erstellen.
+Dabei sollen die beiden Angaben aus der Datenbank mithilfe eines Parameter Provider einen Parameter Context erstellt werden.
 Der Parameter Context soll anschließend in den Processgruppen der Aufgaben festgelegt werden, sowie in den InvokeHTTP Prozessoren verwendet werden.
 (Versuche so wenig, wie möglich die vorhandenen Folien zu verwenden.)
 
@@ -9,7 +9,7 @@ Der Parameter Context soll anschließend in den Processgruppen der Aufgaben fest
 
 Erstelle einen Parameter Provider in NiFi, der speziell für Datenbanken geeignet ist.
 
-Die bereits vorhandene Tabelle `` in der Datenbank `configuration` sieht folgendermaßen aus:
+Die bereits vorhandene Tabelle `nifi_api_conf` in der Datenbank `configuration` sieht folgendermaßen aus:
 
 ```txt
 +---------------------------+--------------------------------------------+
@@ -36,4 +36,4 @@ Lade durch den Service, den Parameter Context. Achte darauf, dass beide URLs als
 
 - Füge mindestens einer Prozessgruppe den neu erstellten Parameter Context hinzu.
 - Falls du noch keine Prozessgruppe für eine Übung erstellt hast, füge eine deiner Übungen in eine Prozessgruppe ein.
-- Nutze die Parameter für im Invoke-HTTP Prozessor.
+- Nutze die Parameter für die API im Invoke-HTTP Prozessor.
