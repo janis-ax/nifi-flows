@@ -352,7 +352,7 @@
     "maxConcurrentTasks" : 1,
     "name" : "Database Exercises",
     "outputPorts" : [ ],
-    "parameterContextName" : "Database Connection",
+    "parameterContextName" : "Database",
     "position" : {
       "x" : 0.0,
       "y" : 0.0
@@ -540,7 +540,7 @@
       "maxConcurrentTasks" : 1,
       "name" : "Datenbankverbindung Mittel",
       "outputPorts" : [ ],
-      "parameterContextName" : "Database Connection",
+      "parameterContextName" : "Database",
       "position" : {
         "x" : -256.0,
         "y" : -368.0
@@ -885,7 +885,7 @@
           "esql-max-rows" : "0",
           "dbf-default-precision" : "10",
           "Max Wait Time" : "0 seconds",
-          "SQL Query" : "Select * from #{tabelle.nutzerdaten};",
+          "SQL Query" : "Select * from #{Nutzerdaten};",
           "Database Connection Pooling Service" : "ca0f5729-b86a-3ecb-be3b-67e374a14a15",
           "esql-auto-commit" : "true",
           "dbf-user-logical-types" : "false",
@@ -1051,7 +1051,7 @@
           "rollback-on-failure" : "false",
           "put-db-record-binary-format" : "UTF-8",
           "db-type" : "MySQL",
-          "put-db-record-table-name" : "#{tabelle.nutzerdaten}",
+          "put-db-record-table-name" : "#{Nutzerdaten}",
           "put-db-record-record-reader" : "d9737c2f-2a39-392d-b358-90e5d8a730bc"
         },
         "propertyDescriptors" : {
@@ -1751,7 +1751,7 @@
       "maxConcurrentTasks" : 1,
       "name" : "JoinEnrichment",
       "outputPorts" : [ ],
-      "parameterContextName" : "Database Connection",
+      "parameterContextName" : "Database",
       "position" : {
         "x" : -736.0,
         "y" : -368.0
@@ -1784,7 +1784,7 @@
           "esqlrecord-record-writer" : "738f484d-a9db-36f8-8817-07c99dde382b",
           "dbf-default-precision" : "10",
           "Max Wait Time" : "0 seconds",
-          "SQL Query" : "SELECT m.Strasse as Straße,\n\t   m.Hausnummer,\n\t   m.Postleitzahl,\n\t   m.Stadt  \nFROM #{tabelle.geschaefstellen.addressen} m\nWHERE m.Geschaeftsstelle = '${gs}'",
+          "SQL Query" : "SELECT m.Strasse as Straße,\n\t   m.Hausnummer,\n\t   m.Postleitzahl,\n\t   m.Stadt  \nFROM #{Adresse der GS} m\nWHERE m.Geschaeftsstelle = '${gs}'",
           "Database Connection Pooling Service" : "ca0f5729-b86a-3ecb-be3b-67e374a14a15",
           "esql-auto-commit" : "true",
           "dbf-user-logical-types" : "false",
@@ -2237,23 +2237,17 @@
   "flowEncodingVersion" : "1.0",
   "latest" : false,
   "parameterContexts" : {
+    "Database" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ "Database Connection", "Database Tabellen" ],
+      "name" : "Database",
+      "parameters" : [ ]
+    },
     "Database Connection" : {
       "componentType" : "PARAMETER_CONTEXT",
       "inheritedParameterContexts" : [ ],
       "name" : "Database Connection",
       "parameters" : [ {
-        "description" : "",
-        "name" : "tabelle.produktdaten",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "Produkte"
-      }, {
-        "description" : "",
-        "name" : "tabelle.addressen",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "adresse"
-      }, {
         "description" : "",
         "name" : "Database Driver Locations",
         "provided" : false,
@@ -2261,18 +2255,12 @@
         "value" : "/opt/nifi/drivers/mysql-9.4.0"
       }, {
         "description" : "",
-        "name" : "tabelle.geschaefstellen.addressen",
-        "provided" : false,
-        "sensitive" : false,
-        "value" : "geschaeftsstellen_adressen"
-      }, {
-        "description" : "",
         "name" : "Database Driver Class Name",
         "provided" : false,
         "sensitive" : false,
         "value" : "com.mysql.cj.jdbc.Driver"
       }, {
-        "description" : "Dies ist der Pfad zur lokal laufenden Datenbankserver mit der Datenbank users",
+        "description" : "",
         "name" : "Database Connection URL",
         "provided" : false,
         "sensitive" : false,
@@ -2288,12 +2276,36 @@
         "provided" : false,
         "sensitive" : false,
         "value" : "nifiuser"
+      } ]
+    },
+    "Database Tabellen" : {
+      "componentType" : "PARAMETER_CONTEXT",
+      "inheritedParameterContexts" : [ ],
+      "name" : "Database Tabellen",
+      "parameters" : [ {
+        "description" : "Diese Tabelle die Adressdaten der Nutzer in folgenden Spalten: id (PRIMARY KEY), street, postalCode, city, state, country",
+        "name" : "Adressen der Nutzer",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "adresse"
       }, {
-        "description" : "",
-        "name" : "tabelle.nutzerdaten",
+        "description" : "Diese Tabelle, enthält folgende Spalten:\nuserID (PRIMARY KEY),name , username ,email, phone ,",
+        "name" : "Nutzerdaten",
         "provided" : false,
         "sensitive" : false,
         "value" : "userdata"
+      }, {
+        "description" : "Die Tabelle enthält die folgenden Spalten: ProduktID, Name, Kategorie, Preis",
+        "name" : "Produktdaten",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "Produkte"
+      }, {
+        "description" : "Diese Tabelle enthält folgende Spalten: ID (PRIMARY KEY), Geschaeftsstelle, Strasse, Hausnummer, Postleitzahl,\nStadt, Land",
+        "name" : "Adresse der GS",
+        "provided" : false,
+        "sensitive" : false,
+        "value" : "geschaeftsstellen_adressen"
       } ]
     }
   },
