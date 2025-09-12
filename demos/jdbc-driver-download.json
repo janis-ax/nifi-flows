@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757672423489,
+    "description" : "A flow which downloads jdbc treiber for the main four drivers (mmsql, mysql, postgressql, oracle)",
+    "identifier" : "jdbc-driver-download",
+    "lastModifiedTimestamp" : 1757672423489,
+    "name" : "jdbc-driver-download",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
