@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1757925054804,
+    "description" : "A flow with different process groups in it to create the required tables",
+    "identifier" : "createtables",
+    "lastModifiedTimestamp" : 1757925054804,
+    "name" : "create_tables",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
