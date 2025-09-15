@@ -1898,7 +1898,7 @@
             "name" : "PutDatabaseRecord",
             "type" : "PROCESSOR"
           },
-          "flowFileExpiration" : "0 sec",
+          "flowFileExpiration" : "60 sec",
           "groupIdentifier" : "2e5f33cf-2eda-3f4f-9c88-392ffc4150f4",
           "identifier" : "4cfa83be-a808-3de0-9803-4a3167759a7e",
           "labelIndex" : 0,
