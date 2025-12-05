@@ -3,7 +3,7 @@ from nifiapi.flowfiletransform import FlowFileTransform, FlowFileTransformResult
 import json
 
 @use_case(
-    description="Schaut in eine JSON und sagt wohin geloggt wird."
+    description="Schaut in eine JSON und sagt wohin geloggt wird.",
     notes="Das ist ein toller Prozessor"
 )
 
