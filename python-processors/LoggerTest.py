@@ -1,5 +1,7 @@
 """This is a Apache Nifi Python Processor"""
 from nifiapi.flowfiletransform import FlowFileTransform, FlowFileTransformResult
+from nifiapi.documentation import use_case
+from nifiapi.relationship import Relationship
 import json
 
 @use_case(
