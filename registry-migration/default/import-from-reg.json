@@ -1,0 +1,41 @@
+{
+    "externalControllerServices": {},
+    "flowContents": {
+        "comments": "",
+        "componentType": "PROCESS_GROUP",
+        "connections": [],
+        "controllerServices": [],
+        "defaultBackPressureDataSizeThreshold": "1 GB",
+        "defaultBackPressureObjectThreshold": 10000,
+        "defaultFlowFileExpiration": "0 sec",
+        "executionEngine": "INHERITED",
+        "flowFileConcurrency": "UNBOUNDED",
+        "flowFileOutboundPolicy": "STREAM_WHEN_AVAILABLE",
+        "funnels": [],
+        "identifier": "5f0d2d82-9cbf-369e-8a4c-2a24af737d96",
+        "inputPorts": [],
+        "instanceIdentifier": "8d0f9d1c-019d-1000-670b-25635fce59a0",
+        "labels": [],
+        "maxConcurrentTasks": 1,
+        "name": "ORDIX",
+        "outputPorts": [],
+        "position": {
+            "x": -1603.2629847994149,
+            "y": 279.90098360164495
+        },
+        "processGroups": [],
+        "processors": [],
+        "remoteProcessGroups": [],
+        "scheduledState": "ENABLED",
+        "statelessFlowTimeout": "1 min"
+    },
+    "flowEncodingVersion": "1.0",
+    "parameterContexts": {},
+    "parameterProviders": {},
+    "snapshotMetadata": {
+        "author": "ordix",
+        "comments": "Init Commit",
+        "timestamp": 1776188134689,
+        "version": 1
+    }
+}
