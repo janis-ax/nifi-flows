@@ -78,8 +78,11 @@ Außerdem sollen in diesem Schritt die Daten gefiltert werden, nach den Userdate
 Die Tabelle hat folgende Spalten. Der erste Eintrag ist noch nicht in der Tabelle vorhanden, sondern dient nur der Darstellung.
 
 ```csv
-userID; name; username; email
-1; Leanne Graham; B.biz; Sincere@april.biz
++---------------+--------------------------+------------------+---------------------------+
+| userID        | name                     | username         | email                     |
++---------------+--------------------------+------------------+---------------------------+
+|             1 | Leanne Graham            | Bret             | Sincere@april.biz         |
++---------------+--------------------------+------------------+---------------------------+
 ```
 
 Verwende zur Anpassung einen Processor, der die Daten aus einer JSON filtern kann.
