@@ -84,6 +84,36 @@
         "type" : "PROCESSOR"
       },
       "zIndex" : 2
+    }, {
+      "backPressureDataSizeThreshold" : "1 MB",
+      "backPressureObjectThreshold" : 100,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "dd51b40b-9169-31d5-906a-1b42681373ca",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "24 h",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "f22d8b1c-a99b-3da7-b741-feda75657a61",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "efd5452b-6129-3cd6-8f99-45112d59a88f",
+        "name" : "ExecuteSQLRecord",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 3
     } ],
     "controllerServices" : [ {
       "bulletinLevel" : "WARN",
@@ -515,7 +545,22 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 150.0,
+      "identifier" : "8984839b-3c05-3991-bcac-edfe39e1ca9f",
+      "label" : "Doku folgt noch",
+      "position" : {
+        "x" : -1023.4772131484967,
+        "y" : 36.74455603185936
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 150.0,
+      "zIndex" : 1
+    } ],
     "maxConcurrentTasks" : 1,
     "name" : "Tag 3",
     "outputPorts" : [ ],
@@ -2144,6 +2189,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Janis-Tag3-Demos",
-    "timestamp" : 1781083242431
+    "timestamp" : 1781083391757
   }
 }
