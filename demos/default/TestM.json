@@ -1,4 +1,10 @@
 {
+  "externalControllerServices" : {
+    "085a2016-4219-3b40-b659-ac2709d3bef3" : {
+      "identifier" : "085a2016-4219-3b40-b659-ac2709d3bef3",
+      "name" : "Postgres"
+    }
+  },
   "flow" : {
     "createdTimestamp" : 1781083697454,
     "description" : "",
@@ -7,5 +13,491 @@
     "name" : "Test_M",
     "versionCount" : 0
   },
-  "latest" : false
+  "flowContents" : {
+    "comments" : "",
+    "componentType" : "PROCESS_GROUP",
+    "connections" : [ {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "c30157fe-2e4d-365c-bb0d-c829a0380454",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "51f75227-b233-3e2f-b9ca-46b9cc9e7087",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2b7341d7-a0b7-33ca-ae3a-658c1d755b90",
+        "name" : "ExecuteSQLRecord",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 1
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2cad6d22-619f-395b-9b31-a07a6bcb703c",
+        "name" : "Funnel",
+        "type" : "FUNNEL"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "8f27c327-8d35-3255-9b7a-2e87ed739a14",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "failure" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "2b7341d7-a0b7-33ca-ae3a-658c1d755b90",
+        "name" : "ExecuteSQLRecord",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 2
+    } ],
+    "controllerServices" : [ {
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-record-serialization-services-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2-stackable26.3.0"
+      },
+      "comments" : "",
+      "componentType" : "CONTROLLER_SERVICE",
+      "controllerServiceApis" : [ {
+        "bundle" : {
+          "artifact" : "nifi-standard-services-api-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2-stackable26.3.0"
+        },
+        "type" : "org.apache.nifi.serialization.RecordSetWriterFactory"
+      } ],
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "4394433a-8b55-351e-9f2f-eeaa9a5e5079",
+      "name" : "CSVRecordSetWriter",
+      "properties" : {
+        "CSV Format" : "custom",
+        "Include Header Line" : "true",
+        "Schema Access Strategy" : "inherit-record-schema",
+        "Schema Name" : "${schema.name}",
+        "CSV Writer" : "commons-csv",
+        "Escape Character" : "\\",
+        "Trim Fields" : "true",
+        "Schema Text" : "${avro.schema}",
+        "Quote Character" : "\"",
+        "Value Separator" : ",",
+        "Record Separator" : "\\n",
+        "Schema Write Strategy" : "no-schema",
+        "Character Set" : "UTF-8",
+        "Quote Mode" : "MINIMAL",
+        "Include Trailing Delimiter" : "false"
+      },
+      "propertyDescriptors" : {
+        "CSV Format" : {
+          "displayName" : "CSV Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CSV Format",
+          "sensitive" : false
+        },
+        "Include Header Line" : {
+          "displayName" : "Include Header Line",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Header Line",
+          "sensitive" : false
+        },
+        "Schema Access Strategy" : {
+          "displayName" : "Schema Access Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Access Strategy",
+          "sensitive" : false
+        },
+        "Schema Name" : {
+          "displayName" : "Schema Name",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Name",
+          "sensitive" : false
+        },
+        "CSV Writer" : {
+          "displayName" : "CSV Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "CSV Writer",
+          "sensitive" : false
+        },
+        "Escape Character" : {
+          "displayName" : "Escape Character",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Escape Character",
+          "sensitive" : false
+        },
+        "Date Format" : {
+          "displayName" : "Date Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Date Format",
+          "sensitive" : false
+        },
+        "Null String" : {
+          "displayName" : "Null String",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Null String",
+          "sensitive" : false
+        },
+        "Trim Fields" : {
+          "displayName" : "Trim Fields",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Trim Fields",
+          "sensitive" : false
+        },
+        "Schema Version" : {
+          "displayName" : "Schema Version",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Version",
+          "sensitive" : false
+        },
+        "Time Format" : {
+          "displayName" : "Time Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Time Format",
+          "sensitive" : false
+        },
+        "Comment Marker" : {
+          "displayName" : "Comment Marker",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Comment Marker",
+          "sensitive" : false
+        },
+        "Schema Branch" : {
+          "displayName" : "Schema Branch",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Branch",
+          "sensitive" : false
+        },
+        "Schema Reference Reader" : {
+          "displayName" : "Schema Reference Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Schema Reference Reader",
+          "sensitive" : false
+        },
+        "Schema Text" : {
+          "displayName" : "Schema Text",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Text",
+          "sensitive" : false
+        },
+        "Quote Character" : {
+          "displayName" : "Quote Character",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Quote Character",
+          "sensitive" : false
+        },
+        "Value Separator" : {
+          "displayName" : "Value Separator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Value Separator",
+          "sensitive" : false
+        },
+        "Schema Registry" : {
+          "displayName" : "Schema Registry",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Schema Registry",
+          "sensitive" : false
+        },
+        "Record Separator" : {
+          "displayName" : "Record Separator",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Record Separator",
+          "sensitive" : false
+        },
+        "Timestamp Format" : {
+          "displayName" : "Timestamp Format",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Timestamp Format",
+          "sensitive" : false
+        },
+        "Schema Write Strategy" : {
+          "displayName" : "Schema Write Strategy",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Schema Write Strategy",
+          "sensitive" : false
+        },
+        "Schema Cache" : {
+          "displayName" : "Schema Cache",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Schema Cache",
+          "sensitive" : false
+        },
+        "Character Set" : {
+          "displayName" : "Character Set",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Character Set",
+          "sensitive" : false
+        },
+        "Quote Mode" : {
+          "displayName" : "Quote Mode",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Quote Mode",
+          "sensitive" : false
+        },
+        "Schema Reference Writer" : {
+          "displayName" : "Schema Reference Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Schema Reference Writer",
+          "sensitive" : false
+        },
+        "Include Trailing Delimiter" : {
+          "displayName" : "Include Trailing Delimiter",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Include Trailing Delimiter",
+          "sensitive" : false
+        }
+      },
+      "scheduledState" : "DISABLED",
+      "type" : "org.apache.nifi.csv.CSVRecordSetWriter"
+    } ],
+    "defaultBackPressureDataSizeThreshold" : "1 GB",
+    "defaultBackPressureObjectThreshold" : 10000,
+    "defaultFlowFileExpiration" : "0 sec",
+    "executionEngine" : "INHERITED",
+    "externalControllerServiceReferences" : {
+      "085a2016-4219-3b40-b659-ac2709d3bef3" : {
+        "identifier" : "085a2016-4219-3b40-b659-ac2709d3bef3",
+        "name" : "Postgres"
+      }
+    },
+    "flowFileConcurrency" : "UNBOUNDED",
+    "flowFileOutboundPolicy" : "STREAM_WHEN_AVAILABLE",
+    "funnels" : [ {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2cad6d22-619f-395b-9b31-a07a6bcb703c",
+      "position" : {
+        "x" : -4457.56138297064,
+        "y" : -1489.7864223320846
+      }
+    }, {
+      "componentType" : "FUNNEL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "c30157fe-2e4d-365c-bb0d-c829a0380454",
+      "position" : {
+        "x" : -4831.971752652448,
+        "y" : -1510.403733437911
+      }
+    } ],
+    "identifier" : "flow-contents-group",
+    "inputPorts" : [ ],
+    "labels" : [ ],
+    "maxConcurrentTasks" : 1,
+    "name" : "Markus",
+    "outputPorts" : [ ],
+    "position" : {
+      "x" : 0.0,
+      "y" : 0.0
+    },
+    "processGroups" : [ ],
+    "processors" : [ {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.7.2-stackable26.3.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "PRIMARY",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "2b7341d7-a0b7-33ca-ae3a-658c1d755b90",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ExecuteSQLRecord",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : -4816.0,
+        "y" : -1776.0
+      },
+      "properties" : {
+        "Set Auto Commit" : "true",
+        "Max Wait Time" : "0 seconds",
+        "SQL Query" : "SELECT * FROM users;",
+        "Normalize Table/Column Names" : "false",
+        "Database Connection Pooling Service" : "085a2016-4219-3b40-b659-ac2709d3bef3",
+        "Default Decimal Scale" : "0",
+        "Fetch Size" : "0",
+        "Output Batch Size" : "0",
+        "Use Avro Logical Types" : "false",
+        "Record Writer" : "4394433a-8b55-351e-9f2f-eeaa9a5e5079",
+        "Default Decimal Precision" : "10",
+        "Max Rows Per Flow File" : "0"
+      },
+      "propertyDescriptors" : {
+        "Set Auto Commit" : {
+          "displayName" : "Set Auto Commit",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Set Auto Commit",
+          "sensitive" : false
+        },
+        "Max Wait Time" : {
+          "displayName" : "Max Wait Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Wait Time",
+          "sensitive" : false
+        },
+        "SQL Query" : {
+          "displayName" : "SQL Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SQL Query",
+          "sensitive" : false
+        },
+        "Normalize Table/Column Names" : {
+          "displayName" : "Normalize Table/Column Names",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Normalize Table/Column Names",
+          "sensitive" : false
+        },
+        "Database Connection Pooling Service" : {
+          "displayName" : "Database Connection Pooling Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Database Connection Pooling Service",
+          "sensitive" : false
+        },
+        "Default Decimal Scale" : {
+          "displayName" : "Default Decimal Scale",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Default Decimal Scale",
+          "sensitive" : false
+        },
+        "SQL Post-Query" : {
+          "displayName" : "SQL Post-Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SQL Post-Query",
+          "sensitive" : false
+        },
+        "Fetch Size" : {
+          "displayName" : "Fetch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Fetch Size",
+          "sensitive" : false
+        },
+        "Output Batch Size" : {
+          "displayName" : "Output Batch Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Output Batch Size",
+          "sensitive" : false
+        },
+        "Use Avro Logical Types" : {
+          "displayName" : "Use Avro Logical Types",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Use Avro Logical Types",
+          "sensitive" : false
+        },
+        "Record Writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "Record Writer",
+          "sensitive" : false
+        },
+        "SQL Pre-Query" : {
+          "displayName" : "SQL Pre-Query",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "SQL Pre-Query",
+          "sensitive" : false
+        },
+        "Default Decimal Precision" : {
+          "displayName" : "Default Decimal Precision",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Default Decimal Precision",
+          "sensitive" : false
+        },
+        "Max Rows Per Flow File" : {
+          "displayName" : "Max Rows Per Flow File",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Rows Per Flow File",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ExecuteSQLRecord",
+      "yieldDuration" : "1 sec"
+    } ],
+    "remoteProcessGroups" : [ ],
+    "scheduledState" : "ENABLED",
+    "statelessFlowTimeout" : "1 min"
+  },
+  "flowEncodingVersion" : "1.0",
+  "latest" : false,
+  "parameterContexts" : { },
+  "parameterProviders" : { },
+  "snapshotMetadata" : {
+    "author" : "admin",
+    "flowIdentifier" : "TestM",
+    "timestamp" : 1781083698977
+  }
 }
