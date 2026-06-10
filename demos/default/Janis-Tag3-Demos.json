@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1781083241118,
+    "description" : "Enthält die Flows vom dritten Tag. Viel SQL",
+    "identifier" : "Janis-Tag3-Demos",
+    "lastModifiedTimestamp" : 1781083241118,
+    "name" : "Janis-Tag3-Demos",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
