@@ -661,7 +661,22 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 150.0,
+      "identifier" : "70ee7dc0-3976-3226-b270-be6d3e4edd17",
+      "label" : "Test",
+      "position" : {
+        "x" : -816.0,
+        "y" : 464.0
+      },
+      "style" : {
+        "font-size" : "12px"
+      },
+      "width" : 150.0,
+      "zIndex" : 1
+    } ],
     "maxConcurrentTasks" : 1,
     "name" : "Day 3",
     "outputPorts" : [ ],
@@ -1685,6 +1700,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Falk-Day3",
-    "timestamp" : 1781083718796
+    "timestamp" : 1781083795996
   }
 }
