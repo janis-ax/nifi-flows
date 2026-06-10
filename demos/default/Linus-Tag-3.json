@@ -419,24 +419,24 @@
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "2c3fa35c-6c2e-388c-bec9-8f8b89cd198e",
       "position" : {
-        "x" : 592.0,
-        "y" : 1048.0
+        "x" : 544.0,
+        "y" : 1264.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "57075802-d6e6-322c-8e93-8627e6dbc249",
       "position" : {
-        "x" : 2.071428571428555,
-        "y" : 1068.1999816894531
+        "x" : -40.0,
+        "y" : 1288.0
       }
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
       "identifier" : "c3e7ad62-535b-3d39-b8c7-3b9335c4e74a",
       "position" : {
-        "x" : 1105.357142857143,
-        "y" : 1089.0048902558117
+        "x" : 1064.0,
+        "y" : 1304.0
       }
     }, {
       "componentType" : "FUNNEL",
@@ -457,7 +457,37 @@
     } ],
     "identifier" : "flow-contents-group",
     "inputPorts" : [ ],
-    "labels" : [ ],
+    "labels" : [ {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 464.0,
+      "identifier" : "1768200b-40a2-36c0-ad55-1914e98351e2",
+      "label" : "Test ExecuteSQL vs. ExecuteSQLRecord\n",
+      "position" : {
+        "x" : -120.0,
+        "y" : 928.0
+      },
+      "style" : {
+        "font-size" : "20px"
+      },
+      "width" : 1296.0,
+      "zIndex" : 1
+    }, {
+      "componentType" : "LABEL",
+      "groupIdentifier" : "flow-contents-group",
+      "height" : 1448.0,
+      "identifier" : "d5b070bb-9556-3579-8617-85cb2c69a1b2",
+      "label" : "Daten in PostgreSQL-Datenbank schreiben",
+      "position" : {
+        "x" : -800.0,
+        "y" : -576.0
+      },
+      "style" : {
+        "font-size" : "24px"
+      },
+      "width" : 1664.0,
+      "zIndex" : 2
+    } ],
     "maxConcurrentTasks" : 1,
     "name" : "Tag 3",
     "outputPorts" : [ ],
@@ -857,8 +887,8 @@
       "name" : "ExecuteSQL",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 112.0,
-        "y" : 768.0
+        "x" : 64.0,
+        "y" : 984.0
       },
       "properties" : {
         "Set Auto Commit" : "true",
@@ -1415,8 +1445,8 @@
       "name" : "ExecuteSQLRecord",
       "penaltyDuration" : "30 sec",
       "position" : {
-        "x" : 760.0,
-        "y" : 768.0
+        "x" : 712.0,
+        "y" : 984.0
       },
       "properties" : {
         "Set Auto Commit" : "true",
@@ -1660,6 +1690,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Linus-Tag-3",
-    "timestamp" : 1781083747795
+    "timestamp" : 1781083874745
   }
 }
