@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1781079717680,
+    "description" : "Lädt JDBC Treiber herunter",
+    "identifier" : "JDBC-Driver-Download",
+    "lastModifiedTimestamp" : 1781079717680,
+    "name" : "JDBC-Driver-Download",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
