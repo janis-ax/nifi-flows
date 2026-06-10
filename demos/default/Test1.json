@@ -109,14 +109,6 @@
     }, {
       "componentType" : "FUNNEL",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "32f89fd2-cbcd-3676-b7fe-c37f4dbbb750",
-      "position" : {
-        "x" : -4696.0,
-        "y" : -1608.0
-      }
-    }, {
-      "componentType" : "FUNNEL",
-      "groupIdentifier" : "flow-contents-group",
       "identifier" : "c30157fe-2e4d-365c-bb0d-c829a0380454",
       "position" : {
         "x" : -4888.0,
@@ -291,6 +283,6 @@
   "snapshotMetadata" : {
     "author" : "admin",
     "flowIdentifier" : "Test1",
-    "timestamp" : 1781083883798
+    "timestamp" : 1781083936635
   }
 }
