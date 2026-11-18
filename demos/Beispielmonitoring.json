@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1795010184463,
+    "description" : "",
+    "identifier" : "Beispielmonitoring",
+    "lastModifiedTimestamp" : 1795010184463,
+    "name" : "Beispiel_monitoring",
+    "versionCount" : 0
+  },
+  "latest" : false
+}
